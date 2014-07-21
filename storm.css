@@ -1,0 +1,11 @@
+body {
+margin-top: 75px;
+}
+@media (min-width: 768px) { /* tablets and up */ 
+    .group2 {
+        text-align: right;
+    }
+}
+footer {
+    margin: 10px 0;
+}
