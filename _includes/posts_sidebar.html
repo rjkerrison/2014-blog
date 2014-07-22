@@ -1,12 +1,18 @@
 <div class="panel panel-primary">
 <div class="panel-heading">
-<h4>Tags</h4>
+<h4>Recent Posts</h4>
 </div>
 <ul class="list-group">
     {% for post in site.posts limit 4 %}
     <li class="list-group-item">{{ post.date | date_to_string }} &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-        {{ post.content | strip_html | truncatewords:75}}<br>
-            <a href="{{ post.url }}">Read more...</a><br><br>
+    <div class="row">
+		<p>
+			{{post.excerpt}}
+        </p>
+		<p class="text-right">
+			<a href="{{ post.url }}">Read more&hellip;</a>
+		</p>
+	</div>
     {% endfor %}
 </ul>
 </div>
