@@ -6,16 +6,15 @@ title: "Robin James Kerrison"
 {% for post in site.posts offset: 0 limit: 5 %}
 <article>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	<h3 class="text-right">
+	  <i class="icon-calendar"></i> {{ post.date | date: "%B %e, %Y" }}
+	  | <i class="glyphicon-comment"></i> <a href="http://rjkerrison.co.uk{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>  
+	  | <i class="icon-tags"></i> Tags :{% for tag in post.tags %} <a href="/tags/{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;"><button class="label label-info">{{ tag }}</button></a>  {% if forloop.last != true %} {% endif %} {% endfor %}
+	</h3>
+	
 	<p>
 		{{ post.excerpt }}
 	</p>
-    <div class="row">
-        <p>
-          <i class="icon-calendar"></i> {{ post.date | date: "%B %e, %Y" }}
-          | <i class="glyphicon-comment"></i> <a href="http://rjkerrison.co.uk{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>  
-		  | <i class="icon-tags"></i> Tags :{% for tag in post.tags %} <a href="/tags/{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></a>  {% if forloop.last != true %} {% endif %} {% endfor %}            
-        </p>
-    </div>
  
     <p class="text-right"><a href="{{ post.url }}">Read more</a></p>
  
