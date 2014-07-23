@@ -11,7 +11,7 @@ title: "Robin James Kerrison"
 	  |
 	  <span class="glyphicon glyphicon-comment"></span>
 	  <a href="{{site.url}}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.url }}"></a>
-	  | <span class="glyphicon glyphicon-tags"></span> Tags :{% for tag in post.tags %} <a class="btn label label-info" href="/tags/{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}
+	  | <span class="glyphicon glyphicon-tags"></span> Tags :{% for tag in post.tags %} <a class="btn label label-info" href="{{ site-url }}/tags/{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a>  {% if forloop.last != true %} {% endif %} {% endfor %}
 	</h3>
 	<p>
 		{{ post.excerpt }}
