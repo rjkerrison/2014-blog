@@ -11,7 +11,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 	<!-- Bootstrap CSS file -->
-	<link href="http://rjkerrison.co.uk/bootstrap-custom/css/custom.bootstrap.css" rel="stylesheet" />
+	<link href="http://rjkerrison.co.uk/bootstrap-custom/less/custom.bootstrap.css" rel="stylesheet" />
 	<link href="http://rjkerrison.co.uk/storm.css" rel="stylesheet" />
 
 </head>
@@ -27,16 +27,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://rjkerrison.co.uk/" class="navbar-brand">Robin James Kerrison</a>
+            <a href="http://rjkerrison.co.uk" class="navbar-brand">Robin James Kerrison</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">  
             <ul class="nav navbar-nav">
                 <li><a href="http://rjkerrison.co.uk">Home</a></li>
                 <li><a href="http://rjkerrison.co.uk/contact">Contact</a></li>
                 <li><a href="http://rjkerrison.co.uk/about">About</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="admin.htm"><span class="glyphicon glyphicon-cog"></span></a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search">
               <div class="form-group">
@@ -68,59 +65,23 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
   <li class="archive_list">
-    <time style="color:#666;font-size:11px;" datetime='2012-03-22'>03/22/12</time> <a class="archive_list_article_link" href='/coding/2012/03/22/Part-two-how-I-built-my-blog/'>Part two on how I built my blog</a>
-    <p class="summary">A follow up post on how I built my blog
+    <time style="color:#666;font-size:11px;" datetime='2014-07-21'>07/21/14</time> <a class="archive_list_article_link" href='/coding/2014/07/21/my-new-blog/'>How I built my blog in one day</a>
+    <p class="summary">My new blog.
     <ul class="tag_list">
+      
+      <li class="inline archive_list"><a class="tag_list_link" href="/tag/blog">blog</a></li>
       
       <li class="inline archive_list"><a class="tag_list_link" href="/tag/jekyll">jekyll</a></li>
       
       <li class="inline archive_list"><a class="tag_list_link" href="/tag/github">github</a></li>
       
-      <li class="inline archive_list"><a class="tag_list_link" href="/tag/rss">rss</a></li>
+      <li class="inline archive_list"><a class="tag_list_link" href="/tag/media">media</a></li>
+      
+      <li class="inline archive_list"><a class="tag_list_link" href="/tag/ruby">ruby</a></li>
       
     </ul>
   </li>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="archive_list">
-    <time style="color:#666;font-size:11px;" datetime='2012-03-08'>03/08/12</time> <a class="archive_list_article_link" href='/coding/2012/03/08/How-I-built-my-blog-in-one-day/'>How I built my blog in one day</a>
-    <p class="summary">A tutorial on how I built my blog
-    <ul class="tag_list">
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/tag/jekyll">jekyll</a></li>
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/tag/bootstrap">bootstrap</a></li>
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/tag/github">github</a></li>
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/tag/disqus">disqus</a></li>
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/tag/greer">greer</a></li>
-      
-      <li class="inline archive_list"><a class="tag_list_link" href="/tag/cake">cake</a></li>
-      
-    </ul>
-  </li>
-  
-  
   
   
   
@@ -131,47 +92,56 @@
 </ul>
 		</div>
 		<div class="col-md-4 text-justify">
-		<!-- Subscribe to my feed widget -->
-<div class="well text-center">
-<p class="lead">
-Don't want to miss updates? Please click the below button!
-</p>
-<button class="btn btn-primary btn-lg">Subscribe to my feed</button>
+		<!-- Tag Widget -->
+<div class="panel panel-primary">
+	<div class="panel-heading">
+	<h4>Tag Cloud</h4>
+	</div>
+	<ul class="list-group">
+	<li class="list-group-item">
+		<a style='font-size: 70%' href='/tags/ruby'>ruby</a>
+<a style='font-size: 70%' href='/tags/jekyll'>jekyll</a>
+<a style='font-size: 70%' href='/tags/photography'>photography</a>
+<a style='font-size: 170%' href='/tags/blog'>blog</a>
+<a style='font-size: 70%' href='/tags/github'>github</a>
+<a style='font-size: 170%' href='/tags/media'>media</a>
+
+	</li>
+	</ul>
 </div>
- 
-<!-- Other widgets -->
+<!-- Tag Widget -->
 <div class="panel panel-primary">
 <div class="panel-heading">
-<h4>Tags</h4>
+<h4>Recent Posts</h4>
 </div>
 <ul class="list-group">
-		
-	<li class="list-group-item"><a href="/tags/jekyll">jekyll</a></li>
-		
-	<li class="list-group-item"><a href="/tags/bootstrap">bootstrap</a></li>
-		
-	<li class="list-group-item"><a href="/tags/github">github</a></li>
-		
-	<li class="list-group-item"><a href="/tags/disqus">disqus</a></li>
-		
-	<li class="list-group-item"><a href="/tags/greer">greer</a></li>
-		
-	<li class="list-group-item"><a href="/tags/cake">cake</a></li>
-		
-	<li class="list-group-item"><a href="/tags/rss">rss</a></li>
-		
-	<li class="list-group-item"><a href="/tags/dotnet">dotnet</a></li>
-		
-	<li class="list-group-item"><a href="/tags/fuelux">fuelux</a></li>
-		
-	<li class="list-group-item"><a href="/tags/jquery">jquery</a></li>
-		
-	<li class="list-group-item"><a href="/tags/requirejs">requirejs</a></li>
-		
-	<li class="list-group-item"><a href="/tags/grunt">grunt</a></li>
-		
-	<li class="list-group-item"><a href="/tags/amd">amd</a></li>
-
+    
+    <li class="list-group-item">
+		23 Jul 2014 &raquo;
+		<a href="http://rjkerrison.co.uk/photography/2014/07/23/photographing-rabbits/">Photographing Rabbits</a>
+		<div class="well">
+			<p>
+				I've taken to wildlife photography. It's said that one should never work with animals.
+			</p>
+			<p class="text-right">
+				<a href="/photography/2014/07/23/photographing-rabbits/">Read more&hellip;</a>
+			</p>
+		</div>
+	</li>
+    
+    <li class="list-group-item">
+		21 Jul 2014 &raquo;
+		<a href="http://rjkerrison.co.uk/coding/2014/07/21/my-new-blog/">How I built my blog in one day</a>
+		<div class="well">
+			<p>
+				My new blog.
+			</p>
+			<p class="text-right">
+				<a href="/coding/2014/07/21/my-new-blog/">Read more&hellip;</a>
+			</p>
+		</div>
+	</li>
+    
 </ul>
 </div>
 		</div>
@@ -184,6 +154,21 @@ Don't want to miss updates? Please click the below button!
     </div>
 </footer>
 <script src="jquery-2.1.1.min.js"></script>
-<script src="lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Disqus Script -->
+<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'rjkerrison'; // required: replace example with your forum shortname
+	var disqus_identifier = '/tags/github/';
+	var disqus_url = 'http://rjkerrison.co.uk/tags/github/';
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function () {
+		var s = document.createElement('script'); s.async = true;
+		s.type = 'text/javascript';
+		s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	}());
+</script>
 </body>
 </html>
