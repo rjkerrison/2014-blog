@@ -1,1 +1,82 @@
-@import "../lib/bootstrap-3.1.1/less/variables.less";
+@import "variables.less";
+
+@body-bg: @color-primary-1;
+@navbar-inverse-bg: @color-primary-3;
+@navbar-inverse-color: @color-primary-1;
+@navbar-inverse-link-color: @color-primary-1;
+@headings-font-family: Oswald;
+@font-family-sans-serif: Lato;
+
+@panel-bg: @color-primary-2;
+@panel-primary-text: @color-primary-2;
+@panel-primary-border: @color-primary-2;
+
+@brand-light: @color-primary-2;
+
+@list-group-bg: lighten(@color-primary-2,20%);
+@list-group-border: @color-primary-2;
+
+@brand-primary: @color-primary-3;
+@brand-info: @color-l2;
+@brand-danger: @color-0;
+
+@well-bg: #324599;
+@well-border: darken(@well-bg, 7%);
+
+@link-hover-color: lighten(@link-color, 15%);
+
+.navbar-nav > li > a {
+    font-family: @headings-font-family;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+@pagination-color: @brand-light;
+@pagination-bg: @brand-primary;
+@pagination-border: @brand-primary;
+ 
+@pagination-hover-color: @brand-primary;
+@pagination-hover-bg: @brand-light;
+@pagination-hover-border: @brand-primary;
+ 
+.pager {
+    li {
+        > a {
+            color: @pagination-color;
+        }
+        > a:hover,
+        > a:focus {
+            color: @pagination-hover-color;
+        }
+    }
+}
+
+.well {
+    .lead {
+        font-family: @headings-font-family;
+        font-weight: @headings-font-weight;
+        font-size: @font-size-h3;
+    }
+}
+
+/* MIXINS */
+
+/* As hex codes */
+
+@color-primary-0: #2C4770;	/* Main Primary color */
+@color-primary-1: #D4D4D4;
+@color-primary-2: #6A7D99;
+@color-primary-3: #062147;
+@color-primary-4: #000B1B;
+
+@color-l2: #DFB8BC;
+@color-l1: #C2707A;
+@color-0: #A53542;	/* Main Primary color */
+@color-d1: #880B1A;
+@color-d2: #69000C;
+
+@gray-darker:  @color-primary-4;//lighten(@color-d2, 13.5%); // #222
+@gray-dark:    @color-primary-3;//lighten(@color-d2, 20%);   // #333
+@gray:         @color-primary-0; //lighten(@color-d2, 33.5%); // #555
+@gray-light:   @color-primary-2;//lighten(@color-d2, 60%);   // #999
+@gray-lighter: @color-primary-1;//lighten(@color-d2, 93.5%); // #eee
