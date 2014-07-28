@@ -24,15 +24,10 @@
 <body>
 <!-- Jquery and Bootstrap Script files -->
 {% include nav.html %}
+{% include carousel.html %}
 
 <div id="body" class="container"> 
-	<div class="row">
-		<div class="col-md-8 text-justify">
 		{{content}}
-		</div>
-		<div class="col-md-4 text-justify">
-		{% include sidebar.html %}
-		</div>
 </div>
 
 {% include footer.html %}
@@ -52,6 +47,20 @@
 		s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
 		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 	}());
+</script>
+<script type="text/javascript">
+$(function () {
+    $('#myCarousel').carousel({
+        interval:2000,
+        pause: "false"
+    });
+    $('#playButton').click(function () {
+        $('#myCarousel').carousel('cycle');
+    });
+    $('#pauseButton').click(function () {
+        $('#myCarousel').carousel('pause');
+    });
+});
 </script>
 </body>
 </html>

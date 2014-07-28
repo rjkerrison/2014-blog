@@ -1,20 +1,27 @@
-<div class="panel panel-primary">
+<div class="panel panel-info">
 <div class="panel-heading">
 <h4>Recent Posts</h4>
 </div>
 <ul class="list-group">
-    {% for post in site.posts limit 4 %}
-    <li class="list-group-item">
-		{{ post.date | date_to_string }} &raquo;
-		<a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-		<div class="well">
-			<p>
-				{{post.summary}}
-			</p>
-			<p class="text-right">
-				<a href="{{ post.url }}">Read more&hellip;</a>
-			</p>
-		</div>
+    {% for post in site.posts limit 6 %}
+    <li class="list-group-item btn btn-block btn-primary">
+		<a href="{{ site.url }}{{ post.url }}" class="row" style="margin-bottom:4px;white-space: normal;text-decoration:none;">
+			<div class="col-md-7 col-sm-12">
+			<p>{{ post.title }}</p>
+			</div>
+			<div class="col-md-5 col-sm-12"><p>
+			<span class="glyphicon glyphicon-calendar"></span>
+			{% assign d = post.date | date: "%-d"  %}
+			{% case d %}
+				{% when '1' or '21' or '31' %}{{ d }}st
+				{% when '2' or '22' %}{{ d }}nd
+				{% when '3' or '23' %}{{ d }}rd
+				{% else %}{{ d }}th
+			{% endcase %}
+			{{ post.date | date: "%B" }}
+			{{ post.date | date: "%Y" }}
+			</p></div>
+		</a>
 	</li>
     {% endfor %}
 </ul>

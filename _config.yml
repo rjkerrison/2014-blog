@@ -1,4 +1,4 @@
 markdown: rdiscount
 highlighter: pygments
-permalink: pretty
+permalink: /blog/:year/:month/:day/:title/
 url: http://rjkerrison.co.uk

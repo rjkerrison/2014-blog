@@ -1,0 +1,38 @@
+<!-- Carousel
+	================================================= -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" class="active" data-slide-to="0"></li>
+		{% for post in site.categories.frontpage %}
+        <li data-target="#myCarousel" data-slide-to="{{ forloop.index }}"></li>
+		{% endfor %}
+		<li data-target="#myCarousel" id="pauseButton">Pause</li>
+      </ol>
+      <div class="carousel-inner">
+	   <div class="item active" style="background:url(http://placehold.it/1920x450)">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Robin James Kerrison</h1>
+              <p>Woof woof. I'm a blog.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+	  {% for post in site.categories.frontpage %}
+        <div class="item"
+			style="background:url({% if post.wideimg %} '/media/{{post.wideimg}}.jpg' {% else %} '//placehold.it/1920x450' {% endif %}); background-repeat: no-repeat; background-position: center bottom;">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>{{ post.title }}</h1>
+              <p>{{ post.summary }}</p>
+              <p><a class="btn btn-lg btn-primary" href="{{post.url}}" role="button">Read more</a></p>
+            </div>
+          </div>
+        </div>
+	   {% endfor %}
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+<!-- /.carousel -->

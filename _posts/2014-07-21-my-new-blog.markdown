@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How I built my blog in one day
-category: Coding
+category: frontpage
 tags: blog jekyll github media ruby
 year: 2014
 month: 07
