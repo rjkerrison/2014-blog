@@ -1,15 +1,13 @@
 <!-- Carousel
 	================================================= -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-		<div class="container" id="playbutton">
-			<span class="glyphicon glyphicon-pause"></span>
-		</div>
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" class="active" data-slide-to="0"></li>
 		{% for post in site.categories.frontpage %}
         <li data-target="#myCarousel" data-slide-to="{{ forloop.index }}"></li>
 		{% endfor %}
+		<span id="playbutton" class="glyphicon glyphicon-pause" style="color:white;"></span>
       </ol>
       <div class="carousel-inner">
 	   <div class="item active" style="background:url(http://placehold.it/1920x450)">
@@ -37,13 +35,4 @@
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
-	<script type="text/javascript">
-	function playButtonPress() {
-    $("#playbutton i").toggleClass("glyphicon-stop glyphicon-play");
-
-    console.log("playbutton pressed play was "+play);
-
-    play = !play;
-	
-	</script>
 <!-- /.carousel -->
