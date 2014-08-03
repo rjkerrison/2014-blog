@@ -7,7 +7,7 @@
 		{% for post in site.categories.frontpage %}
         <li data-target="#myCarousel" data-slide-to="{{ forloop.index }}"></li>
 		{% endfor %}
-		<li data-target="#myCarousel" id="playbutton"><i class="icon-pause"></i></li>
+		<li data-target="#myCarousel" id="playbutton"><span class="glyphicon glyphicon-pause"></span></li>
       </ol>
       <div class="carousel-inner">
 	   <div class="item active" style="background:url(http://placehold.it/1920x450)">
@@ -37,7 +37,7 @@
     </div>
 	<script type="text/javascript">
 	function playButtonPress() {
-    $("#playbutton i").toggleClass("icon-stop icon-play");
+    $("#playbutton i").toggleClass("glyphicon-stop glyphicon-play");
 
     console.log("playbutton pressed play was "+play);
 
