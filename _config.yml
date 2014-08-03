@@ -2,4 +2,4 @@ markdown: rdiscount
 highlighter: pygments
 permalink: /blog/:year/:month/:day/:title/
 url: http://rjkerrison.co.uk
-include: {'/_script'}
+include: ['/_script']
