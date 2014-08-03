@@ -1,13 +1,15 @@
 <!-- Carousel
 	================================================= -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<div class="container" id="playbutton">
+			<span class="glyphicon glyphicon-pause"></span>
+		</div>
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" class="active" data-slide-to="0"></li>
 		{% for post in site.categories.frontpage %}
         <li data-target="#myCarousel" data-slide-to="{{ forloop.index }}"></li>
 		{% endfor %}
-		<li data-target="#myCarousel" id="playbutton"><span class="glyphicon glyphicon-pause"></span></li>
       </ol>
       <div class="carousel-inner">
 	   <div class="item active" style="background:url(http://placehold.it/1920x450)">
