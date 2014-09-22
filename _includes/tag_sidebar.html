@@ -1,8 +1,7 @@
-<div class="panel">
+<div class="panel panel-default">
 	<div class="panel-heading">
 	<h4>Tag Cloud</h4>
 	</div>
-	<div class="panel-body">
 	<ul class="list-group">
 	{% for tag in site.tags %}
 		<li class="list-group-item"><a href="{{site.url}}/tags/{{ tag | first }}">
@@ -10,5 +9,4 @@
 		</a></li>
 	{% endfor %}
 	</ul>
-	</div>
 </div>
