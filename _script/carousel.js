@@ -11,6 +11,7 @@ $(function () {
     });
 	$('#playbutton').click(function () {
 		$("#playbutton").toggleClass("glyphicon-pause glyphicon-play");
+		console.log("playbutton pressed pause was "+carousel.pause);
 		carousel.pause = !carousel.pause;
 		if (carousel.pause) {
 			$('#myCarousel').carousel('pause');
@@ -19,4 +20,10 @@ $(function () {
 			$('#myCarousel').carousel('cycle');
 		}
 	});
+    /*$('#playbutton').click(function () {
+        $('#myCarousel').carousel('cycle');
+    });
+    $('#playbutton').click(function () {
+        $('#myCarousel').carousel('pause');
+    });*/
 });
