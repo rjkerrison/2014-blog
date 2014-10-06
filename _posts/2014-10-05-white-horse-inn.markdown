@@ -7,7 +7,7 @@ year: 2014
 month: 10
 day: 05
 published: true
-wideimg: rabbit
+wideimg: roast
 summary: A not-so-dark horse for the best Sunday roast in Leamington Spa.
 readmore: Eat A Horse
 ---
