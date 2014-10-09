@@ -5,14 +5,20 @@ var carousel = {
 	pause:false
 };
 $(function () {
-    $('#myCarousel').carousel({
-        interval:2500,
-        pause: 'false'
-    });
+	$('#myCarousel').carousel({
+		interval:3000,
+		pause: "hover"
+	});
 	$('#playbutton').click(function () {
 		$("#playbutton").toggleClass("glyphicon-pause glyphicon-play");
-		carousel.pause = !carousel.pause;
-		if (carousel.pause) {
+		
+		if (carousel.pause === "hover") {
+			carousel.pause = "true";
+		} else {
+			carousel.pause = "hover";
+		}
+		
+		if (carousel.pause === "hover") {
 			$('#myCarousel').carousel('pause');
 		}
 		else {

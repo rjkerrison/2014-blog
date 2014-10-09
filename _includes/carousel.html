@@ -1,35 +1,39 @@
 <!-- Carousel
 	================================================= -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
 		{% for post in site.categories.frontpage %}
-        <li data-target="#myCarousel" data-slide-to="{{ forloop.index | minus:1 }}"
+		<li data-target="#myCarousel" data-slide-to="{{ forloop.index | minus:1 }}"
 			{% if forloop.first %}class="active"{% endif %}></li>
 		{% endfor %}
 		<span id="playbutton" class="glyphicon glyphicon-pause" style="color: white;"></span>
-      </ol>
-      <div class="carousel-inner">
-   		{% for post in site.categories.frontpage %}
-        <div class="item{% if forloop.first %} active{% endif %}"
-			style="background:url({% if post.wideimg %} '/media/{{post.wideimg}}.jpg' {% else %} '//placehold.it/1920x450' {% endif %}); background-repeat: no-repeat; background-position: center bottom;">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>{{ post.title }}</h1>
-              <p>{{ post.summary }}</p>
-              <p><a class="btn btn-lg btn-primary" href="{{post.url}}" role="button">
-              {% if post.readmore %}
-              	{{ post.readmore }}
-              {% else %}
-              	Read more&hellip;
-              {% endif %}
-              </a></p>
-            </div>
-          </div>
-        </div>
- 			{% endfor %}
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div>
+	</ol>
+	<div class="carousel-inner">
+		{% for post in site.categories.frontpage %}
+		<div class="item{% if forloop.first %} active{% endif %}"
+		style="
+			background-image: url({% if post.wideimg %} '/media/{{post.wideimg}}.jpg' {% else %} '//placehold.it/1920x450' {% endif %});
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: cover;">
+			<div class="container">
+				<div class="carousel-caption">
+					<h1>{{ post.title }}</h1>
+					<p>{{ post.summary }}</p>
+					<p><a class="btn btn-lg btn-primary" href="{{post.url}}" role="button">
+					{% if post.readmore %}
+						{{ post.readmore }}
+					{% else %}
+						Read more&hellip;
+					{% endif %}
+					</a></p>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
 <!-- /.carousel -->

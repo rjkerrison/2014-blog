@@ -6,7 +6,7 @@ tags: blog jekyll github media ruby
 year: 2014
 month: 07
 day: 21
-published: true
+published: false
 summary: My new blog.
 ---
 I've been meaning to start up a blog for ages. I've previously used the usual services like Wordpress and Blogspot, but find them both largely cumbersome in their management and difficult to customise. They also restrict the freedom of content. I knew I'd be able to find a better way: this is it.

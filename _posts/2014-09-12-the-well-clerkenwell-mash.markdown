@@ -9,7 +9,7 @@ tags: london food mash
 year: 2014
 month: 09
 day: 12
-published: false
+published: true
 summary: Garlic and cheese, in seemingly similar quantity.
 ---
 For the second of my Indigo Team Friday Lunches at my new job, we went to a place of Robin's choosing.
