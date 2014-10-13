@@ -1,6 +1,5 @@
 <div class="row">
-	<h1 class="col-md-8 col-sm-12" >{{ page.title }}</h1>
-	<div class="col-md-4 col-sm-12">
+	<div>
 	![{{ page.title }}]({{ site.url }}{{ page.wideimg }}.jpg)
 	</div>
 </div>
