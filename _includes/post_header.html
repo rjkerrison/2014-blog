@@ -1,6 +1,12 @@
 <div class="row">
 	<h1 class="col-md-8 col-sm-12" >{{ page.title }}</h1>
 	<div class="col-md-4 col-sm-12">
+	![{{ page.title }}]({{ site.url }}{{ page.wideimg }}.jpg)
+	</div>
+</div>
+<div class="row">
+	<h1 class="col-md-8 col-sm-12" >{{ page.title }}</h1>
+	<div class="col-md-4 col-sm-12">
 	<span class="glyphicon glyphicon-calendar"></span>
 		{% assign d = page.date | date: "%-d"  %}
 		{% case d %}
