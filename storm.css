@@ -15,6 +15,19 @@ footer {
 a:hover {
 	text-decoration: none;
 }
+article {
+	color: white;
+	padding: 10px;
+	margin: 10px;
+}
+.article-card a {
+	color: white;
+}
+.article-card {
+	color: white;
+	margin: 10px;
+	padding: 10px;
+}
 /* Carousel base class */
 .carousel {
 	height: 300px;
@@ -23,8 +36,8 @@ a:hover {
 	z-index: 11;
 }
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-	background-color: rgba(50,34,34,0.4);
+.carousel-caption, .article-card {
+	background-color: rgba(50,34,34,0.6);
 	margin: 5px;
 	z-index: 10;
 }
@@ -41,7 +54,8 @@ a:hover {
 .carousel,
 .carousel .item,
 .carousel-inner,
-.carousel-caption {
+.carousel-caption,
+article, .article-card {
 	/* For IE 5.5 - 7*/
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99222222, endColorstr=#99222222);
 	/* For IE 8*/

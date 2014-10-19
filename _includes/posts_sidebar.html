@@ -3,9 +3,11 @@
 <h4>Recent Posts</h4>
 </div>
 <ul class="list-group">
-    {% for post in site.posts limit 6 %}
-    <li class="list-group-item btn btn-block btn-primary">
-		<a href="{{ site.url }}{{ post.url }}" class="row" style="margin-bottom:4px;white-space: normal;text-decoration:none;">
+	{% for post in site.posts limit 6 %}
+	<li class="list-group-item btn">
+		<a href="{{ site.url }}{{ post.url }}"
+			class="row"
+			style="margin-bottom:4px;white-space: normal;text-decoration:none;">
 			<div class="col-md-7 col-sm-12">
 			<p>{{ post.title }}</p>
 			</div>
@@ -23,6 +25,6 @@
 			</p></div>
 		</a>
 	</li>
-    {% endfor %}
+	{% endfor %}
 </ul>
 </div>
