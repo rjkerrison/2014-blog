@@ -4,7 +4,7 @@ title: "The Blog"
 permalink: /blog/
 ---
 <h1>Latest Posts</h1>
-{% for post in site.posts limit: 3 where: wideimg %}
+{% for post in site.posts limit: 5 %}{% if post.wideimg %}
 <article
 	style="
 			background-image: url({% if post.wideimg %} '/media/{{post.wideimg}}.jpg' {% else %} '//placehold.it/1920x450' {% endif %});
@@ -19,7 +19,7 @@ permalink: /blog/
 			<a
 				class="col-md-8 col-sm-12"
 				href="{{ post.url }}">
-					{{ post.title }}
+				{{ post.title }}
 			</a>
 			<div class="col-md-4 text-right-md">
 				<span class="glyphicon glyphicon-calendar"></span>
@@ -52,4 +52,5 @@ permalink: /blog/
 		</p>
 	</div>
 </article>
+{% endif %}
 {% endfor %}

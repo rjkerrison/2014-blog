@@ -2,7 +2,7 @@
 permalink: "/js/carousel.js"
 ---
 var carousel = {
-	pause:false
+	pause: "true"
 };
 $(function () {
 	$('#myCarousel').carousel({
