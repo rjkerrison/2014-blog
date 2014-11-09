@@ -2,7 +2,8 @@
 layout: layout
 ---
 <div class="content">
-	{% include post_header.html %}
+	{% assign post = page %}
+	{% include article_card.html %}
 	{{ content }}
 </div>
 <div>

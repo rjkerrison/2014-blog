@@ -1,12 +1,19 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-	<h4>Tag Cloud</h4>
+		<h4>Show Article By Tag
+		<div class="btn-group pull-right">
+			<button class="btn btn-info" data-tag="all">All</button>
+			<button class="btn btn-info" data-tag="none">None</button>
+		</div>
+		</h4>
 	</div>
-	<ul class="list-group">
+	<div class="list-group">
 	{% for tag in site.tags %}
-		<li class="list-group-item"><a href="{{site.url}}/tags/{{ tag | first }}">
-			{{tag | first}}: {{tag | last | size}} posts
-		</a></li>
+	<button
+		data-tag="{{tag | first}}"
+		class="btn btn-warning faded tag-toggle">
+		{{tag | first}}
+	</button>
 	{% endfor %}
-	</ul>
+	</div>
 </div>

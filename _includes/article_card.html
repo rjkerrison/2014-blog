@@ -1,0 +1,83 @@
+<article
+	data-blogtag="{% for tag in post.tags %}{{tag}} {% endfor %}" 
+	style="
+			background-image: url({% if post.wideimg %} '/media/{{post.wideimg}}.jpg' {% else %} '//placehold.it/1920x450' {% endif %});
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			background-size: cover;
+			display: none;
+			width: 100%;
+			height: 100%;"
+		class="container lift">
+	<span class="overlay"></span>
+	<div class="article-card">
+		<header>
+			<div class="row">
+				<h2 class="col-md-12 clear-quarter text-left">
+					<a href="{{ post.url }}">
+						{{ post.title }}
+					</a>
+				</h2>
+				<div class="col-sm-12 text-center visible-xs visible-sm">
+					<span class="glyphicon glyphicon-tags clearright"></span>
+					<div class="btn-group">
+					{% for tag in post.tags %}
+						<a class="btn label btn-info" href="{{ site.url }}/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">
+							{{ tag }}
+						</a>
+					{% endfor %}
+					</div>
+					|
+					<span class="glyphicon glyphicon-comment"></span>
+					<a href="{{site.url}}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">
+					&nbsp;</a>
+				</div>
+				<!--<h3 class="col-md-12 clear-quarter text-right-md text-right-lg">
+					<span class="glyphicon glyphicon-calendar"></span>
+					{% assign d = post.date | date: "%-d"  %}
+					{% case d %}
+						{% when '1' or '21' or '31' %}{{ d }}st
+						{% when '2' or '22' %}{{ d }}nd
+						{% when '3' or '23' %}{{ d }}rd
+						{% else %}{{ d }}th
+					{% endcase %}
+					{{ post.date | date: "%B" }}
+					{{ post.date | date: "%Y" }}
+					|
+					<span class="glyphicon glyphicon-comment"></span>
+					<a href="{{site.url}}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">&nbsp;</a>
+				</h3>-->
+			</div>
+		</header>
+		{% if isList %}
+		<p>
+			{{ post.summary }}
+		</p>
+		<div class="row">
+			<div class="col-md-8 visible-md visible-lg">
+				<span class="glyphicon glyphicon-tags clearright"></span>
+				<div class="btn-group">
+				{% for tag in post.tags %}
+					<a class="btn label btn-info" href="{{ site.url }}/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">
+						{{ tag }}
+					</a>
+				{% endfor %}
+				</div>
+				|
+				<span class="glyphicon glyphicon-comment"></span>
+				<a href="{{site.url}}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">
+				&nbsp;</a>
+			</div>
+			<div class="col-md-4 col-sm-12 text-right-md text-right-lg text-center-sm text-center-xs">
+			<a class="btn btn-primary" style="float: center;" href="{{ post.url }}">
+				{% if post.readmore %}
+					{{ post.readmore }}
+				{% else %}
+					Read more&hellip;
+				{% endif %}
+			</a>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+</article>
