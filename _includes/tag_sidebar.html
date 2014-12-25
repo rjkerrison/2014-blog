@@ -1,19 +1,22 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h4>Show Article By Tag
-		<div class="btn-group pull-right">
-			<button class="btn btn-info" data-tag="all">All</button>
-			<button class="btn btn-info" data-tag="none">None</button>
-		</div>
-		</h4>
-	</div>
-	<div class="list-group">
-	{% for tag in site.tags %}
-	<button
-		data-tag="{{tag | first}}"
-		class="btn btn-warning faded tag-toggle">
-		{{tag | first}}
+<h4>Show Article By Tag</h4>
+<div class="btn-group btn-group-md">
+	<button class="btn btn-success tag-control" data-tag="all">
+		All
+		<span class="glyphicon glyphicon-ok-circle"></span>
 	</button>
-	{% endfor %}
-	</div>
+	<button class="btn btn-danger tag-control" data-tag="none">
+		None
+		<span class="glyphicon glyphicon-remove-circle"></span>
+	</button>
+</div>
+</h4>
+<div class="btn-group btn-group-xs">
+{% for tag in site.tags %}
+<button
+	data-tag="{{tag | first}}"
+	class="btn btn-info faded tag-toggle">
+	{{tag | first}}
+	<span class="fa-icon fa-external-link"></span>
+</button>
+{% endfor %}
 </div>

@@ -71,7 +71,7 @@ $.fn.displayPosts = function() {
 		function () {
 			$(this).fadeOut();
 		}
-	)
+	);
 }
 
 $.fn.toggleTag = function () {
@@ -94,23 +94,105 @@ $.fn.clickFaded = function() {
 		}
 	);
 }
-$.fn.clickActive = function() {
-	$('.tag-toggle.active').each(
-		function () {
-			$(this).click();
+$.fn.clickNotFaded = function() {
+	$('.tag-toggle').filter(':not(.faded)').click();
+}
+$.fn.viewImage = function() {
+	$('body').hide();
+}
+
+$.fn.viewImage = function() {
+	$('body').hide();
+}
+
+$.fn.textWidth = function() {
+	var html_org = $(this).html();
+	var html_calc = '<span>' + html_org + '</span>';
+	$(this).html(html_calc);
+
+	var width = $(this).find('span:first').width();
+
+	$(this).html(html_org);
+	return width;
+}
+
+$.fn.roundLineBreaks = function() {
+
+	var buttonsToRound = $(this);
+
+	var firstElement = $(buttonsToRound[0]);
+	var lastElement = firstElement;
+	var finalRowEnd = false;
+	var finalRowStart = firstElement;
+	var count = 0;
+
+	var containerWidth = $(this).parent().parent().width() - 1;
+
+	var widths = $.map(
+		buttonsToRound,
+		function ( val ) {
+			return $(val).textWidth()
+				+ 1*$(val).css('padding-left').replace("px","")
+				+ 1*$(val).css('padding-right').replace("px","");
 		}
 	);
-}
+	var maxWidth = Math.max.apply(Math, widths);
+
+	buttonsToRound.width(maxWidth);
+
+	while(count < buttonsToRound.length && firstElement.offset().top == $(buttonsToRound[count]).offset().top) {
+		count++;
+	}
+
+	buttonsToRound.width(1+Math.max(maxWidth, containerWidth/count));
+	buttonsToRound.removeClass('force-no-margin-left');
+
+	buttonsToRound.each(function() {
+		if (lastElement && lastElement.offset().top != $(this).offset().top) {
+			finalRowEnd = lastElement;
+			finalRowStart = $(this);
+			$(this).addClass('force-no-margin-left');
+		}
+		lastElement = $(this);
+	});
+
+	buttonsToRound.removeClass('round-top-left round-bottom-left round-top-right round-bottom-right');
+
+	if (!finalRowEnd) {
+		finalRowEnd = lastElement;
+	}
+
+	firstElement.addClass('round-top-left');
+	lastElement.addClass('round-bottom-right');
+	finalRowEnd.addClass('round-bottom-right');
+	finalRowStart.addClass('round-bottom-left');
+	$(buttonsToRound[count-1]).addClass('round-top-right');
+};
+
+$(window).on('resize', function() {
+	$('.tag-toggle').roundLineBreaks();
+	$('.tag-control').roundLineBreaks();
+});
+
 $(document).ready(function() {
+	$('img').click(
+		function() {
+			$(this).viewImage();
+		}
+	);
+
+	$('.tag-toggle').roundLineBreaks();
+	$('.tag-control').roundLineBreaks();
+
 	$('[data-tag="all"]').click(
 		$(this).clickFaded
 	);
 	$('[data-tag="none"]').click(
-		$(this).clickActive
+		$(this).clickNotFaded
 	);
 	$('.tag-toggle').click(
 		function() {
-			$(this).toggleClass("btn-success btn-warning faded active");
+			$(this).toggleClass("btn-success btn-info faded");
 			$(this).toggleTag();
 		}
 	);
