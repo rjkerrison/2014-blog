@@ -1,5 +1,7 @@
 ## rjkerrison.github.com
 
+![Build Status][https://travis-ci.org/rjkerrison/rjkerrison.github.io.svg?branch=master "Build Status"]
+
 ### Wordpress, Tumblr, Blogspot all suck
 They just don't have the level of customisability &ndash; it's a word &ndash; that I really look for in a web solution.
 
