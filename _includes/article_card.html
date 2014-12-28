@@ -5,8 +5,8 @@
 		background-repeat: no-repeat;
 		background-position: center bottom;
 		background-size: cover;
-		display: none;
-		width: 100%;
+		{% if tags_selected_by_javascript %}display: none;
+		{% endif %}width: 100%;
 		height: 100%;"
 	class="container lift">
 	<div class="article-card">

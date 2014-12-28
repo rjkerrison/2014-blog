@@ -1,5 +1,4 @@
 ---
-image: hello
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,18 +24,7 @@ image: hello
 			{% include {{ incl | append: ".html" }} %}
 		{% endfor %}
 	{% endif %}
-	{% if page.sidebar != false %}
-		<div class="row">
-		<div class="col-md-8 text-justify">
-	{% endif %}
 		{{content}}
-	{% if page.sidebar != false %}
-		</div>
-		<div class="col-md-4 text-justify">
-		{% include sidebar.html %}
-		</div>
-		</div>
-	{% endif %}
 	{% include footer.html %}
 	{% include scripts.html %}
 </div>

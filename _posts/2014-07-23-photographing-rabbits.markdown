@@ -2,7 +2,7 @@
 layout: post
 title: Photographing Rabbits
 category: frontpage
-tags: blog photography media
+tags: blog photography
 year: 2014
 month: 07
 day: 23

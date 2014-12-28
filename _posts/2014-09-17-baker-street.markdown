@@ -2,7 +2,7 @@
 layout: post
 title: Baker Street
 category: frontpage
-tags: london history transport
+tags: london history
 year: 2014
 month: 07
 day: 23

@@ -1,11 +1,22 @@
 ---
 layout: layout
+tag_sidebar: false
 ---
-<div class="content">
-	{% assign post = page %}
-	{% include article_card.html %}
-	{{ content }}
-</div>
-<div>
-	{% include disqus.html %}
+<div class="row">
+	<div class="col-md-8 text-justify">
+		<div class="content">
+			{% assign post = page %}
+			{% include article_card.html %}
+			{{ content }}
+		</div>
+		<div>
+			{% include disqus.html %}
+		</div>
+	</div>
+	<div class="col-md-4 text-justify">
+	{% assign isList = true %}
+	{% for post in site.posts limit: 10 %}
+		{% include article_card.html %}
+	{% endfor %}
+	</div>
 </div>
