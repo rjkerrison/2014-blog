@@ -1,6 +1,6 @@
 ## rjkerrison.github.com
 
-![Build Status][https://travis-ci.org/rjkerrison/rjkerrison.github.io.svg?branch=master "Build Status"]
+![Build Status][Travis]
 
 ### Wordpress, Tumblr, Blogspot all suck
 They just don't have the level of customisability &ndash; it's a word &ndash; that I really look for in a web solution.
@@ -14,3 +14,5 @@ an online tutorial or simply standard Bootstrap.
 * The Carousel's Play/Pause Button
  * Adapting the standard Bootstrap carousel example to have a play/pause button proved difficult. The resulting code is at *_script/carousel.js* and *_includes/carousel.html*.
 * Nothing else.
+
+[Travis]: https://travis-ci.org/rjkerrison/rjkerrison.github.io.svg?branch=master "Build Status"
