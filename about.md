@@ -12,17 +12,17 @@ title: "About This Blog"
 </div>
 <div class="row text-center">
 	<div class="col-md-4">
-		<img src="//placehold.it/200x200" alt="Generic placeholder">
+		{% include image.html image="rabbit.jpg" title="A rabbit." lightbox="rabbit" %}
 		<h2>Who's this Robin guy?</h2>
 		I'm a dude. I live in London and I like mashed potato.
 	</div>
 	<div class="col-md-4">
-		<img src="//placehold.it/200x200" alt="Generic placeholder">
+		{% include image.html image="bakerstreet16-9.jpg" title="The oldest underground railway platform in the world." lightbox="baker-street" %}
 		<h2>My Girlfriend</h2>
 		My girlfriend is amazing. She makes videos and me smile.
 	</div>
 	<div class="col-md-4">
-		<img src="//placehold.it/200x200" alt="Generic placeholder">
+		{% include image.html image="roast.jpg" title="A very yummy roast dinner." lightbox="roast" %}
 		<h2>Photography Skills</h2>
 		I do a lot of photography. To book me for your event, why not do that <em>right now</em>?
 	</div>

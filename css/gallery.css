@@ -1,0 +1,18 @@
+.shield {
+	position: fixed;
+	padding: 10%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 20;
+}
+.shield>.thumbnail {
+	max-width:100%;
+	max-height:100%;
+	position:relative;
+	display:inline-block;
+	overflow:hidden;
+}
+.shield>.thumbnail>img {
+	max-height: 100%;
+}

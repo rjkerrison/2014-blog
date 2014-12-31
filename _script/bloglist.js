@@ -97,13 +97,6 @@ $.fn.clickFaded = function() {
 $.fn.clickNotFaded = function() {
 	$('.tag-toggle').filter(':not(.faded)').click();
 }
-$.fn.viewImage = function() {
-	$('body').hide();
-}
-
-$.fn.viewImage = function() {
-	$('body').hide();
-}
 
 $.fn.textWidth = function() {
 	var html_org = $(this).html();
@@ -175,12 +168,6 @@ $(window).on('resize', function() {
 });
 
 $(document).ready(function() {
-	$('img').click(
-		function() {
-			$(this).viewImage();
-		}
-	);
-
 	$('.tag-toggle').roundLineBreaks();
 	$('.tag-control').roundLineBreaks();
 
