@@ -1,28 +1,28 @@
 ---
 permalink: "/js/carousel.js"
 ---
-var carouselState = "pause";
-
+var carousel = {
+	pause: "true"
+};
 $(function () {
 	$('#myCarousel').carousel({
 		interval:3000,
 		pause: "hover"
 	});
-	$('#playbutton').click(togglePlay);
+	$('#playbutton').click(function () {
+		$("#playbutton").toggleClass("glyphicon-pause glyphicon-play");
+		
+		if (carousel.pause === "hover") {
+			carousel.pause = "true";
+		} else {
+			carousel.pause = "hover";
+		}
+		
+		if (carousel.pause === "hover") {
+			$('#myCarousel').carousel('pause');
+		}
+		else {
+			$('#myCarousel').carousel('cycle');
+		}
+	});
 });
-
-var togglePlay = function()
-{
-	$("#playbutton").toggleClass("glyphicon-pause glyphicon-play");
-	
-	if (carouselState === "hover")
-	{
-		$('#myCarousel').carousel('pause');
-		carouselState = "pause";
-	}
-	else
-	{
-		$('#myCarousel').carousel('cycle');
-		carouselState = "hover";
-	}
-};
