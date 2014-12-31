@@ -129,6 +129,7 @@ $.fn.roundLineBreaks = function() {
 				+ 1*$(val).css('padding-right').replace("px","");
 		}
 	);
+	
 	var maxWidth = Math.max.apply(Math, widths);
 
 	buttonsToRound.width(maxWidth);
@@ -137,7 +138,9 @@ $.fn.roundLineBreaks = function() {
 		count++;
 	}
 
-	buttonsToRound.width(1+Math.max(maxWidth, containerWidth/count));
+	var newWidth = 1 + Math.max(maxWidth, containerWidth/count);
+
+	buttonsToRound.css("width", newWidth);
 	buttonsToRound.removeClass('force-no-margin-left');
 
 	buttonsToRound.each(function() {
@@ -159,7 +162,7 @@ $.fn.roundLineBreaks = function() {
 	lastElement.addClass('round-bottom-right');
 	finalRowEnd.addClass('round-bottom-right');
 	finalRowStart.addClass('round-bottom-left');
-	$(buttonsToRound[count-1]).addClass('round-top-right');
+	buttonsToRound.eq(count-1).addClass('round-top-right');
 };
 
 $(window).on('resize', function() {
