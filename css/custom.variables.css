@@ -1,1 +1,54 @@
-.body{background-color:#fff}.navbar-nav>li>a{font-family:Oswald;font-size:18px;text-transform:uppercase;font-weight:bold}
+.body {
+  background-color: #ffffff;
+}
+/*
+@list-group-bg: lighten(@color-primary-2,20%);
+@list-group-border: @color-primary-2;
+
+@well-bg: @gray;
+@well-border: darken(@well-bg, 7%);
+
+@link-hover-color: lighten(@link-color, 15%);
+*/
+.navbar-nav > li > a {
+  font-family: Oswald;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/*
+.pager {
+	li {
+		> a {
+			color: @pagination-color;
+		}
+		> a:hover,
+		> a:focus {
+			color: @pagination-hover-color;
+		}
+	}
+}
+
+.well {
+	.lead {
+		font-family: @headings-font-family;
+		font-weight: @headings-font-weight;
+		font-size: @font-size-h3;
+	}
+}*/
+/* MIXINS */
+/* As hex codes */
+/* old ones
+@color-primary-0: #2C4770;	/* Main Primary color 
+@color-primary-1: #D4D4D4;
+@color-primary-2: #6A7D99;
+@color-primary-3: #062147;
+@color-primary-4: #000B1B; */
+/* Main Primary color */
+/* MIXINS */
+/* As hex codes */
+/* As RGBa codes */
+/* Purple */
+/* Red */
+/* Blue */
+/* Yellow */

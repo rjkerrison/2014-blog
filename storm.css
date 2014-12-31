@@ -58,7 +58,7 @@ article {
 	background-color: transparent;
 }
 .btn {
-	z-index: 1; #Has to be above the overlay.
+	z-index: 1; /*Has to be above the overlay.*/
 }
 .grow {
 	display: block;
