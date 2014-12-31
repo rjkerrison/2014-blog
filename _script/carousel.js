@@ -1,28 +1,37 @@
 ---
 permalink: "/js/carousel.js"
 ---
-var carousel = {
-	pause:false
-};
-$(function () {
-	$('#myCarousel').carousel({
-		interval:3000,
-		pause: "hover"
-	});
-	$('#playbutton').click(function () {
-		$("#playbutton").toggleClass("glyphicon-pause glyphicon-play");
-		
-		if (carousel.pause === "hover") {
-			carousel.pause = "true";
-		} else {
-			carousel.pause = "hover";
+var notHovering = true;
+var playButtonIsSetToPlay = true;
+
+$(function() {
+	var carousel = setInterval(function() {
+		$('#myCarousel').carousel('pause');
+		if(notHovering && playButtonIsSetToPlay) {
+			// var slides = $('#myCarousel > ol > li'),
+				// active = slides.filter('.active'),
+				// next = active.next('li'),
+			var toClick = $('#myCarousel').find('.right.carousel-control');
+			toClick.trigger('click');
 		}
-		
-		if (carousel.pause === "hover") {
-			$('#myCarousel').carousel('pause');
+	}, 2500);
+
+	$('#myCarousel').on(
+		'mouseenter',
+		function () {
+			notHovering = false;
 		}
-		else {
-			$('#myCarousel').carousel('cycle');
+	);
+	$('#myCarousel').on(
+		'mouseleave',
+		function () {
+			notHovering = true;
 		}
-	});
+	);
+
+	$("#playbutton").click(function() { 
+		playButtonIsSetToPlay = !playButtonIsSetToPlay;
+		notHovering = true;
+		$(this).toggleClass("glyphicon-pause glyphicon-play");
+	}); 
 });
