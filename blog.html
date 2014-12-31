@@ -5,14 +5,14 @@ permalink: /blog/
 tags_selected_by_javascript: true
 ---
 <div class="row">
-	<div class="col-md-8 text-justify">
+	<div class="col-md-9 text-justify">
 		<h1>Latest Posts</h1>
 		{% assign isList = true %}
 		{% for post in site.posts limit: 10 %}
 			{% include article_card.html %}
 		{% endfor %}
 	</div>
-	<div class="col-md-4 text-justify">
+	<div class="col-md-3 text-justify">
 	{% include sidebar.html %}
 	</div>
 </div>

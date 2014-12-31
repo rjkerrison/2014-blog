@@ -16,7 +16,6 @@ var shield =
 		);
 
 $.fn.viewImage = function() {
-	
 	$(this).wrap(shield);
 	$(this).unbind('click');
 	while ($('.shield').length !== 1) {

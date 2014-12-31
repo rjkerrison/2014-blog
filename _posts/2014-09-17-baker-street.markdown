@@ -12,8 +12,7 @@ wideimg: bakerstreetwide
 readmore: Visit Baker Street
 ---
 Popular culture has a wee obsession with Baker Street. It stems, no doubt, from *The Strand*&apos;s
-second most famous serials and short stories. Why, though, did Arthur Conan Doyle &ndash; a General
-Practitioner at St Bartholomew&apos;s Hospital, London and precursor to Michael Crichton &ndash; choose
+second most famous serials and short stories. Why, though, did Arthur Conan Doyle choose
 such an innocuous location as the home of his super sleuth?
 
 My interest with Baker Street lies somewhat beyond 221B, which itself lay beyond the end of the original run of the street.
