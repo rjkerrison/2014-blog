@@ -5,21 +5,12 @@
 {% include head.html %}
 <body>
 <header class="navbar
-	navbar-inverse
-	visible-sm
-	visible-xs
-	bs-docs-nav" role="banner">
-	{% include nav.html %}
-</header>
-<div id="body" class="body container">
-	<header class="navbar
-		navbar-fixed
 		navbar-inverse
-		visible-md
-		visible-lg
+		navbar-static-top
 		bs-docs-nav" role="banner">
 		{% include nav.html %}
-	</header>
+</header>
+<div id="body" class="body container">
 	{% if page.includes != null %}
 		{% for incl in page.includes %}
 			{% include {{ incl | append: ".html" }} %}

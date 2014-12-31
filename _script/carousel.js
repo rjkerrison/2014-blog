@@ -8,9 +8,6 @@ $(function() {
 	var carousel = setInterval(function() {
 		$('#myCarousel').carousel('pause');
 		if(notHovering && playButtonIsSetToPlay) {
-			// var slides = $('#myCarousel > ol > li'),
-				// active = slides.filter('.active'),
-				// next = active.next('li'),
 			var toClick = $('#myCarousel').find('.right.carousel-control');
 			toClick.trigger('click');
 		}
