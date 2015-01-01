@@ -36,6 +36,9 @@ a:hover {
 .clearright {
 	margin-right: 0.5em;
 }
+.clear-bottom {
+	margin-bottom: 0.5em;
+}
 article {
 	position:relative;
 	color: white;
