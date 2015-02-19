@@ -30,5 +30,5 @@ $(function() {
 		playButtonIsSetToPlay = !playButtonIsSetToPlay;
 		notHovering = true;
 		$(this).toggleClass("glyphicon-pause glyphicon-play");
-	}); 
+	});
 });
