@@ -19,10 +19,10 @@
 .refnum {
 	position: relative;
 	left: 0px;
-	bottom: 2ex;
+	bottom: 1ex;
 	font-family: Verdana, sans-serif;
 	color: #005994;
-	font-size: .7em;
+	font-size: .6em;
 	font-weight: bold;
 	cursor: pointer;
 }
