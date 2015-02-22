@@ -41,3 +41,17 @@ $(document).ready(function() {
 		}
 	);
 });
+
+// Laying out the photos.
+function curate() {
+	var images = $('.gallery').children('img');
+	var properties = images.map(resolveProperties);
+	console.log(properties);
+}
+
+function resolveProperties(i, image) {
+	return {
+		height: image.height();
+		width: image.width();
+	}
+}
