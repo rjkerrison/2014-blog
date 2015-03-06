@@ -1,5 +1,5 @@
-{% if ref_num %}{% assign ref_num = ref_num + 1 %}{% else %}{% assign ref_num = 1 %}{% endif %}<span class="ref"><span class="refnum" href="#" data-ref="{{ref_num}}">[{{ref_num}}]</span>
+<span class="ref"><span class="refnum" href="#" data-ref="{% increment ref_num %}">[{{ref_num}}]</span>
 	<span class="refbody" data-ref="{{ref_num}}">
-		{{include.text}}
+		{{ include.text }}
 	</span>
 </span>
