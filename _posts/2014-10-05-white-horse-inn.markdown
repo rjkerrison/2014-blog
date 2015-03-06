@@ -6,7 +6,7 @@ tags: food leamington
 year: 2014
 month: 10
 day: 05
-published: false
+published: true
 wideimg: roast
 summary: A not-so-dark horse for the best Sunday roast in Leamington Spa.
 readmore: Eat A Horse
