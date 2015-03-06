@@ -16,3 +16,9 @@
 .shield>.thumbnail>img {
 	max-height: 100%;
 }
+.gallery>.thumbnail {
+	position: absolute;
+}
+.gallery {
+	position: relative;
+}
