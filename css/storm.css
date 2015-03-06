@@ -58,7 +58,7 @@ article {
 	background-color: transparent;
 }
 .btn {
-	z-index: 1; #Has to be above the overlay.
+	z-index: 999; #Has to be above the overlay.
 }
 .grow {
 	display: block;
@@ -194,3 +194,21 @@ article, .article-card,
 .shield>.thumbnail>img {
 	max-height: 100%;
 }
+blockquote {
+	font-style: italic;
+	color: #747582;
+	margin-bottom: 5px;
+}
+blockquote:before {
+	content: "\201C";
+}
+blockquote:after {
+	content: "\201D";
+}
+blockquote:before, blockquote:after {
+	font-family: Georgia;
+	font-size: 2em;
+	vertical-align: middle;
+	color: #747582;
+	line-height: 0.8;
+};
