@@ -1,7 +1,14 @@
-<a
+{% if include.local %}<a
 	class="thumbnail"
 	href="{{site.url}}/media/{{include.image}}"
 	data-lightbox="{{include.lightbox}}"
 	data-title="{{include.title}}">
-	<img src="/media/{{include.image}}" alt="{{include.title}}">
+	<img src="{{site.url}}/media/{{include.local}}" alt="{{include.title}}">
 </a>
+{% else if include.imgur %}<a
+	class="thumbnail"
+	href="http://i.imgur.com/{{include.imgur}}.jpg"
+	data-lightbox="{{include.lightbox}}"
+	data-title="{{include.title}}">
+	<img src="http://i.imgur.com/{{include.imgur}}.jpg" alt="{{include.title}}">
+</a>{% endif %}
