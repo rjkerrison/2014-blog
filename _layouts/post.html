@@ -14,12 +14,11 @@ tag_sidebar: false
 		</div>
 	</div>
 	<div class="col-md-3 col-md-pull-9 text-justify">
-	<h4>Similar Articles</h4>
 	{% assign isList = true %}
 	{% assign isSidebar = true %}
 	{% for post in site.posts limit: 10 %}
 		{% if post.url != page.url %}
-			{% assign isSimilar = false %}
+			{% assign isSimilar = true %}
 			{% for page_tag in page.tags %}
 				{% for post_tag in post.tags %}
 					{% if post_tag == page_tag %}

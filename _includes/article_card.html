@@ -14,6 +14,7 @@
 			<div class="row">
 				<h2 class="col-md-12 clear-quarter text-left">
 					{{ post.title }}
+					{% if isSidebar == false %}
 					<span class="pull-right">
 						<span class="glyphicon glyphicon-calendar"></span>
 						{% assign d = post.date | date: "%-d"  %}
@@ -25,6 +26,7 @@
 						{% endcase %}
 						{{ post.date | date: "%B %Y" }}
 					</span>
+					{% endif %}
 				</h2>
 			</div>
 		</header>
