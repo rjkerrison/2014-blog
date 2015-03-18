@@ -3,18 +3,15 @@
 	href="{{site.url}}/media/{{include.image}}"
 	data-lightbox="{{include.lightbox}}"
 	data-title="{{include.title}}">
-	<img src="{{site.url}}/media/{{include.local}}" alt="{{include.title}}">{% endif %}
-{% if include.imgur %}<a
+	<img src="{{site.url}}/media/{{include.local}}" alt="{{include.title}}">{% endif %}{% if include.imgur %}<a
 	class="thumbnail"
 	href="http://i.imgur.com/{{include.imgur}}.jpg?iframe=true"
 	data-lightbox="{{include.lightbox}}"
 	data-title="{{include.title}}">
-	<img src="http://i.imgur.com/{{include.imgur}}.jpg" alt="{{include.title}}">{% endif %}
-{% if include.url %}<a
+	<img src="http://i.imgur.com/{{include.imgur}}.jpg" alt="{{include.title}}">{% endif %}{% if include.url %}<a
 	class="thumbnail"
 	href="{{include.url}}?iframe=true"
 	data-lightbox="{{include.lightbox}}"
 	data-title="{{include.title}}">
-	<img src="{{include.url}}" alt="{{include.title}}">{% endif %}
-{% if include.caption %}<span>{{ include.caption }}</span>{% endif %}
+	<img src="{{include.url}}" alt="{{include.title}}">{% endif %}{% if include.caption %}<span>{{ include.caption }}</span>{% endif %}
 </a>
