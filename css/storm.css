@@ -40,8 +40,8 @@ a:hover {
 .clear-quarter {
 	margin-top: 0.25em;
 }
-.clearright {
-	margin-right: 0.5em;
+.clear-right-quarter {
+	margin-right: 0.25em;
 }
 .clear-bottom {
 	margin-bottom: 0.5em;
@@ -51,18 +51,6 @@ article {
 	color: white;
 	padding: 10px;
 	margin: 10px;
-}
-.overlay {
-	position: absolute;
-	background-color: rgba(255,255,255,0.1);
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-.overlay:hover {
-	background-color: transparent;
 }
 .btn {
 	z-index: 999; #Has to be above the overlay.
@@ -115,12 +103,12 @@ article {
 	z-index: 9;
 }
 .article-card {
-	background-color: rgba(50,34,34,0.8);
+	background-color: rgba(50,34,34,0.7);
 	margin: 5px;
 	z-index: 12;
 }
-.article-card:hover {
-	background-color: rgba(50,34,34,0.3);
+.article-card a:hover {
+	color: rgba(251,110,110,1);
 }
 .carousel .item {
 	height: 300px;
@@ -164,7 +152,7 @@ article, .article-card,
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 }
-.tag-toggle {
+.tag-toggle, .tag-control {
 	border-radius: 0!important;
 	margin-top: -1px;
 }
@@ -183,23 +171,9 @@ article, .article-card,
 .force-no-margin-left {
 	margin-left: 0!important;
 }
-.shield {
-	position: fixed;
-	padding: 10%;
-	top: 0;
-	left: 0;
-	background: rgba(0, 0, 0, 0.7);
-	z-index: 20;
-}
-.shield>.thumbnail {
-	max-width:100%;
-	max-height:100%;
-	position:relative;
-	display:inline-block;
-	overflow:hidden;
-}
-.shield>.thumbnail>img {
-	max-height: 100%;
+.summary {
+	position: relative;
+	padding-bottom: 5px;
 }
 
 @media (min-width: 768px) {

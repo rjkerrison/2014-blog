@@ -64,12 +64,12 @@ $.fn.displayPosts = function() {
 	}
 	$(postsToShow).each(
 		function () {
-			$(this).fadeIn();
+			$(this).parent().fadeIn();
 		}
 	);
 	$('article').not($(postsToShow)).each(
 		function () {
-			$(this).fadeOut();
+			$(this).parent().fadeOut();
 		}
 	);
 }
@@ -108,6 +108,35 @@ $.fn.textWidth = function() {
 	$(this).html(html_org);
 	return width;
 }
+$.fn.textHeight = function() {
+	var html_org = $(this).html();
+	var html_calc = '<span>' + html_org + '</span>';
+	$(this).html(html_calc);
+
+	var height = $(this).find('span:first').height();
+
+	$(this).html(html_org);
+	return height;
+}
+
+$.fn.normaliseHeights = function() {
+
+	var containers = $(this);
+	var paragraphs = $(this).find('p');
+	var heights = $.map(
+		paragraphs,
+		function ( val ) {
+			return $(val).textHeight();
+		}
+	);
+	
+	var maxParagraphHeight = Math.max.apply(Math, heights);
+
+	containers.height(maxParagraphHeight);
+	paragraphs.css('margin-top', function () {
+		return (maxParagraphHeight - $(this).textHeight()) / 2;
+	});
+};
 
 $.fn.roundLineBreaks = function() {
 
@@ -132,7 +161,7 @@ $.fn.roundLineBreaks = function() {
 	
 	var maxWidth = Math.max.apply(Math, widths);
 
-	buttonsToRound.width(maxWidth);
+	buttonsToRound.css("width", maxWidth);
 
 	while(count < buttonsToRound.length && firstElement.offset().top == $(buttonsToRound[count]).offset().top) {
 		count++;
@@ -168,11 +197,13 @@ $.fn.roundLineBreaks = function() {
 $(window).on('resize', function() {
 	$('.tag-toggle').roundLineBreaks();
 	$('.tag-control').roundLineBreaks();
+	$('.summary').normaliseHeights();
 });
 
 $(document).ready(function() {
 	$('.tag-toggle').roundLineBreaks();
 	$('.tag-control').roundLineBreaks();
+	$('.summary').normaliseHeights();
 
 	$('[data-tag="all"]').click(
 		$(this).clickFaded
@@ -193,3 +224,4 @@ $(document).ready(function() {
 		}
 	);
 });
+

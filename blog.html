@@ -4,15 +4,19 @@ title: "The Blog"
 permalink: /blog/
 tags_selected_by_javascript: true
 ---
-<div class="row">
-	<div class="col-md-9 text-justify">
+<div class="text-center">
+	<div class="row">
 		<h1>Latest Posts</h1>
+		<div class="col-md-4 col-md-push-4">
+			{% include tag_sidebar.html %}
+		</div>
+	</div>
+	<div class="row">
 		{% assign isList = true %}
 		{% for post in site.posts limit: 10 %}
-			{% include article_card.html %}
+			<div class="col-md-6">
+				{% include article_card.html %}
+			</div>
 		{% endfor %}
-	</div>
-	<div class="col-md-3 text-justify">
-	{% include sidebar.html %}
 	</div>
 </div>

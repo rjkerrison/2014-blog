@@ -10,61 +10,62 @@
 		height: 100%;"
 	class="container lift">
 	<div class="article-card">
+		
 		<header>
 			<div class="row">
 				<h2 class="col-md-12 clear-quarter text-left">
-					{{ post.title }}
-					{% if isSidebar %}{% else %}
-					<span class="pull-right">
+					<a href="{{ post.url }}" title="{{ post.readmore }}">
+						{{ post.title }}
+					</a>
+					<span class="hidden-sm hidden-xs small">
 						<span class="glyphicon glyphicon-calendar"></span>
-						{% assign d = post.date | date: "%-d"  %}
-						{% case d %}
-							{% when '1' or '21' or '31' %}{{ d }}st
-							{% when '2' or '22' %}{{ d }}nd
-							{% when '3' or '23' %}{{ d }}rd
-							{% else %}{{ d }}th
-						{% endcase %}
-						{{ post.date | date: "%B %Y" }}
+						<a href="{{ post.url }}" title="{{ post.readmore }}">
+							{% assign d = post.date | date: "%-d"  %}
+							{% case d %}
+								{% when '1' or '21' or '31' %}{{ d }}st
+								{% when '2' or '22' %}{{ d }}nd
+								{% when '3' or '23' %}{{ d }}rd
+								{% else %}{{ d }}th
+							{% endcase %}
+							{{ post.date | date: "%B %Y" }}
+						</a>
 					</span>
-					{% endif %}
+					<span class="hidden-md hidden-lg small pull-right">
+						<span class="glyphicon glyphicon-calendar"></span>
+						<a href="{{ post.url }}" title="{{ post.readmore }}">
+							{% assign d = post.date | date: "%-d"  %}
+							{% case d %}
+								{% when '1' or '21' or '31' %}{{ d }}st
+								{% when '2' or '22' %}{{ d }}nd
+								{% when '3' or '23' %}{{ d }}rd
+								{% else %}{{ d }}th
+							{% endcase %}
+							{{ post.date | date: "%B %Y" }}
+						</a>
+					</span>
 				</h2>
 			</div>
 		</header>
+		</a>
 		<div class="row">
-			<div class="
-				{% if isSidebar %}	col-md-12 col-sm-12
-				{% else %}			col-sm-12 col-md-4 col-md-push-8 text-right-lg
-				{% endif %}			text-center clear-bottom">
-				<span class="glyphicon glyphicon-tags clearright"></span>
-				<div class="btn-group">
+			<div class="col-xs-12 summary">
+				<p class="text-left">
+					{{ post.summary }}
+				</p>
+			</div>
+			<div class="col-xs-12 text-right pull-right small">
+				<span class="glyphicon glyphicon-tags clear-right-quarter"></span>
 				{% for tag in post.tags %}
-					<a class="btn label btn-info" href="{{ site.url }}/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">
+					{% if forloop.first != true %}, {% endif %}
+					<a href="{{ site.url }}/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">
 						{{ tag }}
 					</a>
 				{% endfor %}
-				</div>
 				|
 				<span class="glyphicon glyphicon-comment"></span>
 				<a href="{{ site.url }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">
 				&nbsp;</a>
 			</div>
-			<p class="
-				{% if isSidebar %}		col-md-12
-				{% else %}			col-md-8 col-md-pull-4
-				{% endif %}			col-sm-12 text-center-sm">
-				{{ post.summary }}
-			</p>
-			{% if isList %}
-			<div class="col-md-12 text-center">
-			<a class="btn btn-primary" style="float: center;" href="{{ post.url }}">
-				{% if post.readmore %}
-					{{ post.readmore }}
-				{% else %}
-					Read more&hellip;
-				{% endif %}
-			</a>
-			</div>
-			{% endif %}
 		</div>
 	</div>
 </article>
