@@ -12,13 +12,13 @@ title: "About This Blog"
 </div>
 <div class="row text-center">
 	<div class="col-md-4">
-		{% include image.html image="rabbit.jpg" title="A rabbit." lightbox="roast" %}
+		{% include image.html local="rabbit.jpg" title="A rabbit." lightbox="roast" %}
 	</div>
 	<div class="col-md-4">
-		{% include image.html image="bakerstreet16-9.jpg" title="The oldest underground railway platform in the world." lightbox="roast" %}
+		{% include image.html local="bakerstreet16-9.jpg" title="The oldest underground railway platform in the world." lightbox="roast" %}
 	</div>
 	<div class="col-md-4">
-		{% include image.html image="roast.jpg" title="A very yummy roast dinner." lightbox="roast" %}
+		{% include image.html local="roast.jpg" title="A very yummy roast dinner." lightbox="roast" %}
 	</div>
 </div>
 <div class="row text-center">

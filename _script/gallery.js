@@ -27,8 +27,8 @@ function bestRatio(image) {
 	var ratio;
 	for (var i in ratios) {
 		errors[i] =
-			Math.abs(ratios[i].x * image.height / ratios[i].y
-			- image.width);
+			Math.abs(ratios[i].x * image.height() / ratios[i].y
+			- image.width());
 		if (i === "0" || errors[i] < smallestError) {
 			smallestError = errors[i];
 			ratio = ratios[i];
@@ -87,20 +87,16 @@ function resolveThumbnailPosition(thumbnail) {
 }
 
 function curate() {
-	boxWidth = $('.gallery').parent().width() / 32;
+	boxWidth = $('.gallery').parent().width() / 64;
+	console.log(boxWidth);
 
 	var thumbnails = $('.gallery').find('.thumbnail');
-	thumbnails.each(resolveThumbnailPosition($(this)));
-
-	// thumbnails.height(function() {
-	// 	return bestRatio($(this).find('img')[0]).y * boxWidth;
-	// });
-	// thumbnails.width(function() {
-	// 	return bestRatio($(this).find('img')[0]).x * boxWidth;
-	// });
-	// thumbnails.attr('title', function() {
-	// 	return bestRatio($(this).find('img')[0]).x + ' by ' + bestRatio($(this).find('img')[0]).y;
-	// });
+	
+	thumbnails.one('load', function() {
+		resolveThumbnailPosition($(this));
+	}).each(function() {
+		if($(this).children('img').get(0).complete) $(this).load();
+	});
 }
 
-curate();
+$(document).on('ready', curate);
