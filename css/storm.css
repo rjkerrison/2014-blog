@@ -274,6 +274,7 @@ blockquote.right {
 	font-size: 15px;
 	text-indent: 2em;
 	color: #232323;
+	text-align: justify;
 }
 .thumbnail, .refbody {
 	text-indent: 0;
