@@ -11,10 +11,10 @@ tags_selected_by_javascript: true
 			{% include tag_sidebar.html %}
 		</div>
 	</div>
-	<div class="row">
+	<div class="flex-container">
 		{% assign isList = true %}
 		{% for post in site.posts limit: 10 %}
-			<div class="col-md-6">
+			<div class="flex-item">
 				{% include article_card.html %}
 			</div>
 		{% endfor %}

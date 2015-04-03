@@ -119,25 +119,6 @@ $.fn.textHeight = function() {
 	return height;
 }
 
-$.fn.normaliseHeights = function() {
-
-	var containers = $(this);
-	var paragraphs = $(this).find('p');
-	var heights = $.map(
-		paragraphs,
-		function ( val ) {
-			return $(val).textHeight();
-		}
-	);
-	
-	var maxParagraphHeight = Math.max.apply(Math, heights);
-
-	containers.height(maxParagraphHeight);
-	paragraphs.css('margin-top', function () {
-		return (maxParagraphHeight - $(this).textHeight()) / 2;
-	});
-};
-
 $.fn.roundLineBreaks = function() {
 
 	var buttonsToRound = $(this);
@@ -197,13 +178,11 @@ $.fn.roundLineBreaks = function() {
 $(window).on('resize', function() {
 	$('.tag-toggle').roundLineBreaks();
 	$('.tag-control').roundLineBreaks();
-	$('.summary').normaliseHeights();
 });
 
 $(document).ready(function() {
 	$('.tag-toggle').roundLineBreaks();
 	$('.tag-control').roundLineBreaks();
-	$('.summary').normaliseHeights();
 
 	$('[data-tag="all"]').click(
 		$(this).clickFaded

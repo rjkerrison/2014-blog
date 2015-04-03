@@ -1,0 +1,18 @@
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	align-content: stretch;
+}
+.flex-item {
+	flex: 100 1 auto;
+	margin: 5px;
+	transition:
+		flex-grow 1s,
+		flex-basis 1s,
+		overflow 0s;
+		display 1s linear 1s;
+}
+.flex-item>article {
+	margin: 0;
+}
