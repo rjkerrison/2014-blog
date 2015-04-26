@@ -1,4 +1,5 @@
 ---
+permalink: /ge2015/
 layout: post
 tags:
 - politics
