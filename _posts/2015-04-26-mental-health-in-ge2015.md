@@ -8,6 +8,7 @@ title: Mental Health in the UK General Election 2015
 wideimg: liz-tower-go
 categories: frontpage
 published: true
+summary: A look at how the major parties' manifestos discuss mental health.
 ---
 Attitudes around mental health have shifted a lot in the last decade.
 It's now an issue at the forefront of the agendas for all but the two largest parties,
