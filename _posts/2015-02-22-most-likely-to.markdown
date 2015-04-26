@@ -31,11 +31,11 @@ There's just so much wrong with this.
 First of all, the assumption that all coins are the same as the coin used by Timmy is clearly bogus.
 For this reason, Timmy might bother flipping three coins 100 times each,
 in which case he's still got a 9.7% chance of "disproving" the teacher by continuously landing 51 or more heads,
-as well as a further 9.7% chance of making the symmetrical 51 or more tails.
+as well as a symmetrical 9.7% chance of landing 51 or more tails.
 All in all then, with a perfectly balanced coin,{% include ref.html text="There's no such thing." %}
-Timmy is still more likely to get the same bias indication thrice than to get a perfect 50/50 once.
+Timmy is still more likely to get the same bias indication thrice than to get a perfect 50/50 once. <span style="color: red;">wrong/misleading</span>
 
-The problem is basically that correlation doesn't imply causation.
+The problem is basically that correlation doesn't imply causation.<span style="color: red;">actually, we're not talking about that right now</style>.
 
 It is the treachery of this closing clause which leads to problems. Bias dictates everything we do.
 You might well enjoy *Love Actually* but for your experience that you dislike romcoms;

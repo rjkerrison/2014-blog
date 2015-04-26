@@ -6,7 +6,7 @@ tags: statistics
 year: 2015
 month: 02
 day: 22
-published: true
+published: false
 summary: and its importance in an abstract world
 wideimg: rabbit
 readmore: Take a chance.

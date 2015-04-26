@@ -11,7 +11,7 @@ summary: Your vote counts a hella lot more if you use it.
 wideimg: liz-tower-go
 readmore: Be Counted
 ---
-Democracy in Britain is crap.
+I understand voter apathy. For a liberal country, Democracy in Britain isn't half crap.
 
 If you'd like some evidence on this front, watch Prime Minister's Questions and attempt to take it seriously.
 Count the number of national referenda in the past 30 years.
