@@ -99,11 +99,4 @@ function curate() {
 	});
 }
 
-var container = document.querySelector('#container');
-var msnry = new Masonry( container, {
-  // options...
-  itemSelector: '.item',
-  columnWidth: 200
-});
-
-//$(document).on('ready', curate);
+$(document).on('ready', curate);
