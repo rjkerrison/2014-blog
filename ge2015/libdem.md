@@ -16,16 +16,15 @@ summary: In the General Election 2015.
 
 Prior to the current government, the Liberal Democrats were seen by many as the only real alternative
 to a ping-pong system of Parliament, with periodic switches between Labour and Conservative governments
-effecting an oscillatory economy.
+effecting an oscillatory welfare system and changing little else.
 
-Essentially, if you were bored of Westminster doing nothing more than
-turning welfare up to eleven and back down to nought every decade or so, Liberal Democrats were the party for you.
-This let them have policies on other issues and generally they were the only among the big three to even
-admit that mental health was a thing, let alone a social issue.
+Essentially, if you were bored of Westminster turning welfare up to eleven and back down to nought every decade or so, Liberal Democrats were the party for you.
+This let them be the voice on societal policies instead of being economicentric.
+Generally, they were the only party among the big three to even admit that mental health was a thing, let alone a social issue.
 
 ## General Election 2015 Manifesto
 
-First mention of mental health: page 1 of a 158-page manifesto. It's there on the front cover.
+First mention of mental health? Page 1 of a 158-page manifesto. It's there on the front cover.
 
 <blockquote>Invest £8 billion to
 improve our NHS
@@ -33,7 +32,7 @@ and guarantee equal
 care for mental
 health</blockquote>
 
-There's a feeling throughout the Liberal Democrats' manifesto that they're more than ever aware of the effect
+There's a feeling throughout the Liberal Democrats' manifesto that they're aware more than ever of the effect
 of mental health on wider issues.
 
 Like most other parties, there's a promise that mental health will finally
@@ -48,7 +47,7 @@ themselves will find emergency help at A&amp;E and teenagers suffering
 from eating disorders will get the help they need close to home."</blockquote>
 
 While rekindling their previous status as the party representing the needs of young people
-&ndash; tarnished somewhat{{include ref.html text="somewhat here meaning \"almost irrevocably\""}} by the increase in tuition fees to £9,000 per year &ndash; the Liberal Democrats include a note that apprenticeships should lead the way
+&ndash; tarnished somewhat{% include ref.html text="&quot;somewhat&quot; here meaning &quot;almost irrevocably&quot;" %} by the increase in tuition fees to £9,000 per year &ndash; the Liberal Democrats include a note that apprenticeships should lead the way
 in mental health-conscious employment.
 
 <blockquote>Liberal Democrats will protect young people’s entitlements to the
@@ -95,7 +94,25 @@ investment will help ensure children can access high-quality care
 closer to home.</blockquote>
 
 ## Supplementary ["Manifesto for the mind"][ManifestoForTheMind]
-The Liberal Democrats have provided a supplement to their [full manifesto][LibDemGeneralElectionManifesto] focussing on mental wellbeing.
+The Liberal Democrats have provided a 7-page supplement to their [full manifesto][LibDemGeneralElectionManifesto] focussing on mental wellbeing.
+
+The document discusses the problems associated with mental health and the way it's handled in public services and society at large.
+The main points are in the full manifesto, but this supplement does serve to give a little more background into why mental health is such a major issue.
+
+The supplement outlines an investment of £250 million over five years "in transforming care for pregnant women,
+new mothers and those who have experienced miscarriage or still birth."
+
+The supplement reasserts the Liberal Democrats' goal of a £1.25 billion investment in children's
+mental health services which began with this year's budget.
+They're also alone in promising mental health research funds, pledging a £50 million investment.
+
+They will also put mental health on the school curriculum in an effort to educate children on the importance of mental wellbeing,
+as well as introducing "care navigators" to the health service to help people navigate the UK's labyrinthine health system.
+
+There's actually so much more in both documents and I'd recommend reading the *Manifesto for the Mind* if not both of them.
+The Liberal Democrats really have their shit together on this and hopefully any representation they get on May 7<sup>th</sup>
+will be able to coerce many of these changes over the next five years.
+
 
 [LibDemGeneralElectionManifesto]:https://d3n8a8pro7vhmx.cloudfront.net/libdems/pages/8907/attachments/original/1429028133/Liberal_Democrat_General_Election_Manifesto_2015.pdf?1429028133
 [ManifestoForTheMind]:https://d3n8a8pro7vhmx.cloudfront.net/libdems/pages/8632/attachments/original/1427785664/MentalHealthMiniManifesto_2015_30_03_15_copy.2-8.pdf?1427785664

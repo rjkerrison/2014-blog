@@ -6,7 +6,7 @@ tags: statistics
 year: 2015
 month: 02
 day: 19
-published: true
+published: false
 summary: I know half as you half as well as I'd like and know more than half as well as you deserve.
 wideimg: rabbit
 readmore: Glass Half-Full?

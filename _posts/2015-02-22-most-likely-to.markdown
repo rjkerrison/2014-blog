@@ -6,7 +6,7 @@ tags: statistics
 year: 2015
 month: 02
 day: 22
-published: true
+published: false
 summary: Bias versus probability.
 wideimg: rabbit
 readmore: Take a chance.
