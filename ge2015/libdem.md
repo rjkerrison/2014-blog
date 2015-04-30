@@ -44,7 +44,7 @@ Parliament will have the resources to make sure mental health
 will have equal status with physical health. Those facing anxiety
 and depression will be seen swiftly, people struggling not to harm
 themselves will find emergency help at A&amp;E and teenagers suffering
-from eating disorders will get the help they need close to home."</blockquote>
+from eating disorders will get the help they need close to home.</blockquote>
 
 While rekindling their previous status as the party representing the needs of young people
 &ndash; tarnished somewhat{% include ref.html text="&quot;somewhat&quot; here meaning &quot;almost irrevocably&quot;" %} by the increase in tuition fees to £9,000 per year &ndash; the Liberal Democrats include a note that apprenticeships should lead the way
