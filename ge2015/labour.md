@@ -60,4 +60,4 @@ access talking therapies</blockquote>
 
 Is it enough?
 
-No. The [Conservatives](..\conservative) do better by some margin and even they are dwarfed completely by both the understanding and commitments laid down by [UKIP](..\ukip), the [Green Party](..\green) and the [Liberal Democrats](..\libdem).
+No. The [Conservatives](../conservative) do better and even they are dwarfed completely by both the understanding and commitments laid down by [UKIP](../ukip), the [Green Party](../green) and the [Liberal Democrats](..\/ibdem).

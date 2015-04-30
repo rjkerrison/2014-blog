@@ -92,9 +92,9 @@ The following terms never appear once in the whole 84-page document:
 
 Overall, the manifesto has an admission that mental health treatment needs to be reformed and that mental health should have parity with physical health, a few hints at some policies thereof, but no real discussion of what or how.
 
-Only [Labour](..\labour) are more lacking in their apparent commitment to mental health.
+Only [Labour](../labour) are more lacking in their apparent commitment to mental health.
 
-The [Green Party](..\green) and the [Liberal Democrats](..\libdem) demonstrate a much greater understanding of mental health and a proportionate commitment to the issue.
-Even [UKIP](..\ukip) outstreak the Conservatives &ndash;albeit only for UK residents who have paid taxes for an five years or more.
+The [Green Party](../green) and the [Liberal Democrats](../libdem) demonstrate a much greater understanding of mental health and a proportionate commitment to the issue.
+Even [UKIP](../ukip) outstreak the Conservatives &ndash;albeit only for UK residents who have paid taxes for an five years or more.
 
 I'd expect a governing party to have the best understanding of what ails its people and how that should be addressed.
