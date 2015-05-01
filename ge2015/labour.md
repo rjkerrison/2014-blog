@@ -11,7 +11,7 @@ year: 2015
 month: 04
 day: 26
 published: true
-summary: In the General Election 2015.
+summary: In the <a href="../">General Election 2015</a>.
 ---
 
 In the time of zero-hour contracts and rising living costs,
@@ -60,4 +60,4 @@ access talking therapies</blockquote>
 
 Is it enough?
 
-No. The [Conservatives](../conservative) do better and even they are dwarfed completely by both the understanding and commitments laid down by [UKIP](../ukip), the [Green Party](../green) and the [Liberal Democrats](..\/ibdem).
+No. The [Conservatives](../conservative) do better and even they are dwarfed completely by both the understanding and commitments laid down by [UKIP](../ukip), the [Green Party](../green) and the [Liberal Democrats](../libdem).

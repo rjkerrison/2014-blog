@@ -11,7 +11,7 @@ year: 2015
 month: 04
 day: 26
 published: true
-summary: In the General Election 2015.
+summary: In the <a href="../">General Election 2015</a>.
 ---
 
 I wouldn't automatically associate the Conservative Party with a commitment to mental health;

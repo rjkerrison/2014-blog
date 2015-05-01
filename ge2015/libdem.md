@@ -11,7 +11,7 @@ year: 2015
 month: 04
 day: 26
 published: true
-summary: In the General Election 2015.
+summary: In the <a href="../">General Election 2015</a>.
 ---
 
 Prior to the current government, the Liberal Democrats were seen by many as the only real alternative
