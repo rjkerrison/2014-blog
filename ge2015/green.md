@@ -89,7 +89,7 @@ which asks
 
 The answer is a hell of a lot, and the Green Party is well aware.
 They talk of how the current welfare system breeds desperation and stress, with which I'd entirely
-agree.{% include ref.html text="having essentially wasted my final year of university due to anxiety stemming from how terrifying the thought of unemployment was." %}
+agree.
 
 The Green Party's discussion of drugs here follows from a point they made in *We will act to prevent illness and expand primary and community care*,
 in which the party asserts that it will &quot;treat drug addiction as a health problem rather than a crime, making drugs policy the responsibility of the Department of Health
