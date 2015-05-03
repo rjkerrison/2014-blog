@@ -2,7 +2,7 @@
 layout: post
 permalink: /ge2015/mental-health/ukip/
 title: The UK Independence Party's approach to Mental Health
-wideimg: liz-tower-go
+wideimg: liz-tower-go-200
 tags:
 - politics
 - health

@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /ge2015/mental-health/green/
-wideimg: liz-tower-go
+wideimg: liz-tower-go-200
 title: The Green Party's approach to Mental Health
 tags:
 - politics

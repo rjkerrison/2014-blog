@@ -6,7 +6,7 @@ tags:
 - health
 title: Mental Health in the UK General Election 2015
 date: 2015-05-03
-wideimg: liz-tower-go
+wideimg: liz-tower-go-200
 categories: frontpage
 published: true
 summary: A look at how the major parties' manifestos discuss mental health.

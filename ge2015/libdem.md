@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /ge2015/mental-health/libdem/
-wideimg: liz-tower-go
+wideimg: liz-tower-go-200
 title: The Liberal Democrats' approach to Mental Health
 tags:
 - politics
