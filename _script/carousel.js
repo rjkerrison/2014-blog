@@ -11,7 +11,7 @@ $(function() {
 			var toClick = $('#myCarousel').find('.right.carousel-control');
 			toClick.trigger('click');
 		}
-	}, 2500);
+	}, 3500);
 
 	$('#myCarousel').on(
 		'mouseenter',
