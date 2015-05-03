@@ -1,10 +1,11 @@
 ---
-permalink: /ge2015/
+permalink: /ge2015/mental-health/
 layout: post
 tags:
 - politics
 - health
 title: Mental Health in the UK General Election 2015
+date: 2015-05-03
 wideimg: liz-tower-go
 categories: frontpage
 published: true
@@ -18,7 +19,7 @@ Of all the parties, the Liberal Democrats are the most verbose on the issue, fol
 Both have sensible plans for reforms and give mental health the priority it needs,
 not just within the health service but within government and society as well.
 
-My following handy guide offers a summary of how each of the UK's seven largest political parties
+My following handy guide offers a summary of how each of Britain's seven largest political parties
 describe mental health and their commitment to it in their General Election 2015 manifestos.
 
 ## Conservatives
@@ -29,7 +30,7 @@ They've not been so verbose as some of the smaller parties,
 nor have they offered any concrete numbers on waiting lists or spending.
 However, there are a number of qualitative commitments laid down in their manifesto.
 
-[Read more&hellip;]({{site.url}}/ge2015/conservative)
+[Read more&hellip;](./conservative)
 
 ## Labour
 
@@ -39,7 +40,7 @@ the second is a whole paragraph promising that mental health will have parity wi
 physical health in a Labour-driven NHS;
 the third is a reassertion of the same promise in a summary of the manifesto.
 
-[Read more&hellip;]({{site.url}}/ge2015/labour)
+[Read more&hellip;](./labour)
 
 ## Liberal Democrats
 The Liberal Democrats are the only party to have released a supplementary manifesto
@@ -47,7 +48,7 @@ dedicated to their stance on mental health ahead of 7<sup>th</sup> May.
 
 They cover the issue more than anyone and are only outpaced by Green on their use of numbers and on one or two minor points.
 
-[Read more&hellip;]({{site.url}}/ge2015/libdem)
+[Read more&hellip;](./libdem)
 
 ## Green Party
 
@@ -57,14 +58,14 @@ mandate not only to increase funding for mental health, but
 to change the culture within which mental health is considered
 differently and subordinately to physical health.
 
-[Read more&hellip;]({{site.url}}/ge2015//green)
+[Read more&hellip;](./green)
 
 ## UK Independence Party
 
 UKIP make refreshingly sensible promises, but they're vague enough not to mean all that much.
 Also, everything they say on health is negated by the denial of treatment for anyone who isn't yet five-years a Brit.
 
-[Read more&hellip;]({{site.url}}/ge2015/ukip)
+[Read more&hellip;](./ukip)
 
 ## Scottish National Party
 

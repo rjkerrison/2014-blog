@@ -242,15 +242,15 @@ blockquote {
 	color: #747582;
 	margin-bottom: 5px;
 	margin-left: 5%;
-	margin-right: 25%;
+	margin-right: 5%;
 }
-blockquote:before {
-	content: "\201C";
+.quote-start:before {
+	content: "\201C"!important;
 }
-blockquote:after {
-	content: "\201D";
+.quote-end:after {
+	content: "\201D"!important;
 }
-blockquote:before, blockquote:after {
+.quote-start:before, .quote-end:after {
 	font-family: Georgia;
 	font-size: 2em;
 	vertical-align: middle;
@@ -302,4 +302,8 @@ blockquote.right {
 	position: relative;
 	border-radius: 5px;
 	margin-bottom: 5em;
+}
+li {
+	text-indent: -1em;
+	padding-left: 1em;
 }

@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /ge2015/conservative/
+permalink: /ge2015/mental-health/conservative/
 wideimg: liz-tower-go
 title: The Conservative Party's approach to Mental Health
 tags:

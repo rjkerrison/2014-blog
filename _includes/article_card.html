@@ -10,27 +10,13 @@
 		height: 100%;"
 	class="container lift">
 	<div class="article-card">
-		
 		<header>
 			<div class="row">
 				<h2 class="col-md-12 clear-quarter text-left">
 					<a href="{{ post.url }}" title="{{ post.readmore }}">
 						{{ post.title }}
 					</a>
-					<span class="hidden-sm hidden-xs small">
-						<span class="glyphicon glyphicon-calendar"></span>
-						<a href="{{ post.url }}" title="{{ post.readmore }}">
-							{% assign d = post.date | date: "%-d"  %}
-							{% case d %}
-								{% when '1' or '21' or '31' %}{{ d }}st
-								{% when '2' or '22' %}{{ d }}nd
-								{% when '3' or '23' %}{{ d }}rd
-								{% else %}{{ d }}th
-							{% endcase %}
-							{{ post.date | date: "%B %Y" }}
-						</a>
-					</span>
-					<span class="hidden-md hidden-lg small pull-right">
+					<span class="small pull-right">
 						<span class="glyphicon glyphicon-calendar"></span>
 						<a href="{{ post.url }}" title="{{ post.readmore }}">
 							{% assign d = post.date | date: "%-d"  %}

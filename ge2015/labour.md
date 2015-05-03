@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /ge2015/labour/
+permalink: /ge2015/mental-health/labour/
 wideimg: liz-tower-go
 title: The Labour Party's approach to Mental Health
 tags:

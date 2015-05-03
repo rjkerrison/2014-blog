@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /ge2015/libdem/
+permalink: /ge2015/mental-health/libdem/
 wideimg: liz-tower-go
 title: The Liberal Democrats' approach to Mental Health
 tags:
@@ -113,6 +113,7 @@ There's actually so much more in both documents and I'd recommend reading the *M
 The Liberal Democrats really have their shit together on this and hopefully any representation they get on May 7<sup>th</sup>
 will be able to coerce many of these changes over the next five years.
 
+Only the [Green Party](../green) have as reassuring a discussion of mental health reforms in their manifesto.
 
 [LibDemGeneralElectionManifesto]:https://d3n8a8pro7vhmx.cloudfront.net/libdems/pages/8907/attachments/original/1429028133/Liberal_Democrat_General_Election_Manifesto_2015.pdf?1429028133
 [ManifestoForTheMind]:https://d3n8a8pro7vhmx.cloudfront.net/libdems/pages/8632/attachments/original/1427785664/MentalHealthMiniManifesto_2015_30_03_15_copy.2-8.pdf?1427785664

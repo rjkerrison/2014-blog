@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /ge2015/ukip/
+permalink: /ge2015/mental-health/ukip/
 title: The UK Independence Party's approach to Mental Health
 wideimg: liz-tower-go
 tags:
@@ -58,15 +58,16 @@ I'm also not sure what they mean by &quot;directing.&quot; Where &quot;referring
 While the latter two practises could be a great help to a lot of people faced with overcoming a negative prognosis who hadn't considered the availability of mental health support,
 it's a wide canyon between that and referral, which suggests integration of services and thus an easier path to receiving support than by simply being reminded that it exists.
 
-<blockquote>Recognising there is often a link between addiction and mental illness and offering appropriate treatement where this is the case</blockquote>
+<blockquote>Recognising there is often a link between addiction and mental illness and offering appropriate treatment where this is the case</blockquote>
 
-I don't know about anyone else, but I read the Mailism &quot;yobos&quot; in there somewhere.
 There is a refreshing kind of frankness here, but again it seems defamatory and detached, rather than understanding and supportive.
+Perhaps again that's my own bias to read anything from UKIP as if it's been written directly under a *Daily Mail* headline.
+
+I find my attempt to take UKIP seriously a little easier with the following policy.
 
 <blockquote>Offering direct access to specialist mental health treatment for pregnant women or mothers of children under 12 months of age</blockquote>
 
 Much more like it.
-With my UKIP-bias switched to neutral, I can't see anything here suggesting the snottiness present in the previous quote.
 It's also just a good idea.
 Post-martem depression is a major issue and although there's support available, there's too much red tape.
 Allowing direct access to treatment for all pregnant women and new mothers seems a much better approach.

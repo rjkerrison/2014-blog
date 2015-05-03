@@ -6,13 +6,10 @@ title: Politics
 
 What is politics?
 
-Is it something you can touch? Something you can feel?
+At it's core, the word *&quot;politics&quot;* is simply a derivation from the Greek &quot;politikos&quot; – *πολιτικός* for alphabet lovers – itself derived from the ever abundant Greek root *&quot;polis&quot;* meaning *&quot;city&quot;*.
+Politics, then, is all about citizens.
 
-No, wait, that's *The Matrix*.
-
-Anyway, at it's core, the word *&quot;politics&quot;* is simply a derivation from the Greek &quot;politikos&quot; – *πολιτικός* for alphabet lovers – itself derived from the ever abundant Greek root *&quot;polis&quot;* meaning *&quot;city&quot;*. Politics is all about citizens.
-
-Politics is in everything, in that anything people do is an interaction with other people.
+Politics is in everything, in that anything people do is a choice n interaction with other people.
 
 When we speak of politics, however,
 we usually mean anything that people do to gain power over others and what they do with that power on behalf of those others.
