@@ -262,6 +262,11 @@ blockquote.right {
 	margin-left: 25%;
 	margin-right: 5%;
 }
+blockquote li {
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
 .body, #navigation {
 	width: auto;
 	margin-left: 2em;
@@ -302,8 +307,4 @@ blockquote.right {
 	position: relative;
 	border-radius: 5px;
 	margin-bottom: 5em;
-}
-li {
-	text-indent: -1em;
-	padding-left: 1em;
 }
