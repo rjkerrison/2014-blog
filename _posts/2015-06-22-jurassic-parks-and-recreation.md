@@ -9,6 +9,7 @@ day: 22
 published: true
 wideimg: jurassic-world
 summary: Franchise finds a way.
+readmore: More teeth…
 ---
 Colin Trevorrow's latest instalment in the *Jurassic Park* series thaws the ice left behind after the meteorites of *The Lost World* and *Jurassic Park III* all but wiped out the franchise. The task of the deextinction of Spielberg's dino-world was never going to be as simple as Mr DNA might have you believe. Mathematical lingo misuse and corporate spies dressed in Hawaiian shirts just aren't relevant any more.
 
@@ -42,7 +43,9 @@ The supporting cast brings a lot to the table. Coming straight from making Wilso
 
 Park owner Masrani is invaluable in establishing the success of the theme park to date. His passion for the humility which the gargantuan lizards grant humanity provides an insight into how his park has survived so long where John Hammond's "because we can" venture crumbled before it even began.
 
-The way Trevorrow's film establishes attitudes towards the first park – and specifically Hammond – is where the writing shines brightest. How exactly does the successful Jurassic World regard its starcrossed predecessor? In hushed tones, as a disaster akin to Chernobyl, as a ghost story. Hammond is honoured nonetheless for his contributions to the science, and Masrani speaks of the late doctor of paleontology as a fallen hero, but not without a hint of condemnation for the pioneer's hubris. There are other scattered nods to the original throughout the film, some more subtle than others, but *World* never goes full *Terminator* in aggrandisement of its own motifs.
+The way Trevorrow's film establishes attitudes towards the first park – and specifically Hammond – is where the writing shines brightest. How exactly does the successful Jurassic World regard its starcrossed predecessor? In hushed tones, as a ghost story.
+
+Hammond is honoured nonetheless for his contributions to the science, and Masrani speaks of the late doctor of paleontology as a fallen hero, but not without a hint of condemnation for the pioneer's hubris. There are other scattered nods to the original throughout the film, some more subtle than others, but *World* never goes full *Terminator* in aggrandisement of its own motifs.
 
 We've also upgraded from off-screen deaths to laborious depictions of minor characters' demises. One particularly incruciating scene drags out a death for a good while longer than is strictly necessary. It's apparent that what is acceptable to show children in the cinema has vastly shifted since release of *Park*, which after all predates the original PlayStation by over a year. Video games in the past 22 years have pushed so far the boundaries of on-screen violence that what was once reserved for horror films can now find itself in a family adventure.
 
