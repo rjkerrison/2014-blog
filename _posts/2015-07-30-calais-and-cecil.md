@@ -23,6 +23,7 @@ Our egregious Prime Minister Mr David Cameron has followed suit in dehumanising 
 either through an absence of humanity or fear that his party could lose support from *Mail*-ites if he's seen to have a "light touch,"
 His insults and threats thus far have been to use the collective noun for insects and to deny human beings any kind of humanitarian support
 from a nation of incredible wealth.
+In stark contrast to an unfeeling treatment of people, Mr Cameron has been quick to [pledge to save wildlife](http://www.theguardian.com/politics/2015/jul/30/david-cameron-promises-protect-wildlife-cecil-the-lion-killing) following the death of a lion.
 
 The media at large has been very careful to throw around the cacophemism "migrants" as much as possible.
 The M-word's negative connotations are so often reinforced by sensationalist journalism and figures like Farage
