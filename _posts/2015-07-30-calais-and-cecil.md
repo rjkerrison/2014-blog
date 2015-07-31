@@ -2,7 +2,7 @@
 layout: post
 title: Calais, Callousness and Cecil
 category: frontpage
-tags: people politics world
+tags: politics
 year: 2015
 month: 07
 day: 30
