@@ -7,8 +7,8 @@
 	<meta property="og:title" content="{{ page.title }}"/>
 	<meta property="og:description" content="{{ page.summary }}"/>
 	<meta property="og:url" content="{{ page.url }}"/>
-	{% if post.wideimg %}<meta content="{{site.url}}/media/{{ post.wideimg }}.jpg" property="og:image">
-	{% else if post.wideimg-external %}<meta content="{{ post.wideimg-external }}" property="og:image" />{% endif %}
+	{% if post.wideimg %}<meta content="{{site.url}}/media/{{ post.wideimg }}.jpg" property="og:image:url">
+	{% else if post.wideimg-external %}<meta content="{{ post.wideimg-external }}" property="og:image:url" />{% endif %}
 
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
