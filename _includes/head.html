@@ -13,8 +13,8 @@
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-	{% if post.wideimg %}<link href="{{site.url}}/media/{{ post.wideimg }}.jpg" rel="image_src">
-	{% else if post.wideimg-external %}<link href="{{ post.wideimg-external }}" rel="image_src" />{% endif %}
+	{% if page.wideimg %}<link href="{{site.url}}/media/{{ page.wideimg }}.jpg" rel="image_src">
+	{% else if page.wideimg-external %}<link href="{{ page.wideimg-external }}" rel="image_src" />{% endif %}
 
 	<link href="{{site.url}}/css/custom.bootstrap.css" rel="stylesheet" />
 	<link href="{{site.url}}/css/text-align.css" rel="stylesheet" />
