@@ -22,4 +22,13 @@
 	<link href="{{site.url}}/css/lightbox.css" rel="stylesheet" />
 	<link href="{{site.url}}/css/ref.css" rel="stylesheet" />
 	<link href="{{site.url}}/css/flex.css" rel="stylesheet" />
+
+	<!-- Twitter -->
+	<meta property="twitter:site" content="@rjkerrison">
+	<meta property="twitter:creator" content="@rjkerrison">
+	<meta property="twitter:title" content="{{ page.title }}"/>	
+	<meta property="twitter:description" content="{{ page.summary }}"/>
+	{% if page.wideimg %}<meta content="{{site.url}}/media/{{ page.wideimg }}.jpg" property="twitter:image">
+	{% elsif page.wideimg-external %}<meta content="{{ page.wideimg-external }}" property="twitter:image" />{% endif %}
+	<meta name="twitter:card" content="summary_large_image">
 </head>
