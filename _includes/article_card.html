@@ -1,9 +1,9 @@
 <article
 	data-blogtag="{% for tag in post.tags %}{{ tag }} {% endfor %}" 
 	style="
-		background-image: url({% if post.wideimg %} '/media/{{ post.wideimg }}.jpg' {% else %} '//placehold.it/1920x450' {% endif %});
+		background-image: url({% if post.wideimg %} '/media/{{ post.wideimg }}.jpg' {% else if post.wideimg-external %} '{{ post.wideimg-external }}' {% else %} '//placehold.it/1920x450' {% endif %});
 		background-repeat: no-repeat;
-		background-position: center bottom;
+		background-position: center;
 		background-size: cover;
 		{% if tags_selected_by_javascript %}display: none;
 		{% endif %}width: 100%;
