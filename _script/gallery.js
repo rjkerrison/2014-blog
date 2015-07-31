@@ -88,7 +88,6 @@ function resolveThumbnailPosition(thumbnail) {
 
 function curate() {
 	boxWidth = $('.gallery').parent().width() / 64;
-	console.log(boxWidth);
 
 	var thumbnails = $('.gallery').find('.thumbnail');
 	
