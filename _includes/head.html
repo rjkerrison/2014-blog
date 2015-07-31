@@ -7,14 +7,14 @@
 	<meta property="og:title" content="{{ page.title }}"/>
 	<meta property="og:description" content="{{ page.summary }}"/>
 	<meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
-	{% if page.wideimg %}<meta content="{{site.url}}/media/{{ page.wideimg }}.jpg" property="og:image:url">
-	{% else if page.wideimg-external %}<meta content="{{ page.wideimg-external }}" property="og:image:url" />{% endif %}
+	{% if page.wideimg %}<meta content="{{site.url}}/media/{{ page.wideimg }}.jpg" property="og:image">
+	{% elsif page.wideimg-external %}<meta content="{{ page.wideimg-external }}" property="og:image" />{% endif %}
 
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 	{% if page.wideimg %}<link href="{{site.url}}/media/{{ page.wideimg }}.jpg" rel="image_src">
-	{% else if page.wideimg-external %}<link href="{{ page.wideimg-external }}" rel="image_src" />{% endif %}
+	{% elsif page.wideimg-external %}<link href="{{ page.wideimg-external }}" rel="image_src" />{% endif %}
 
 	<link href="{{site.url}}/css/custom.bootstrap.css" rel="stylesheet" />
 	<link href="{{site.url}}/css/text-align.css" rel="stylesheet" />
