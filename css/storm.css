@@ -366,3 +366,7 @@ form#command_form > label {
 	font-weight: normal;
 	text-align: right;
 }
+::selection {
+	color: rgba(255, 255, 255, 1);
+	background: rgba(193, 13, 42, 0.8);
+}
