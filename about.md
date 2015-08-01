@@ -4,7 +4,7 @@ layout: layout
 title: "About This Blog"
 ---
 
-# About The Blog
+# About [rjkerrison.co.uk]({{ site.url }})
 
 Hi, I'm Robin James Kerrison. Welcome to my blog. You probably want to know where it grew up, what its lousy childhood was like and all that David Copperblog kind of stuff, which is fortunate as I feel like going into it.
 
