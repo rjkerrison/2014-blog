@@ -339,13 +339,26 @@ form#command_form {
 	left: 0;
 	z-index: 2000;
 }
+
+@media (min-width: 600px) {
+	form#command_form > input, form#command_form > label {
+		width: 400px;
+		margin-left: -200px;
+	}
+}
+
+@media (max-width: 599px) {
+	form#command_form > input, form#command_form > label {
+		width: 80%;
+		margin-left: -40%;
+	}
+}
+
 form#command_form > input {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	width: 400px;
 	height: 40px;
-	margin-left: -200px;
 	margin-top: -20px;
 	padding: 2px;
 	font-size: 32px;
@@ -357,9 +370,7 @@ form#command_form > label {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	width: 400px;
 	height: 40px;
-	margin-left: -200px;
 	margin-top: 25px;
 	padding: 2px;
 	color: rgba(255, 255, 255, 1);
