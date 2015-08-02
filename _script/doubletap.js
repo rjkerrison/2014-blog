@@ -26,9 +26,7 @@ $document.mousedown(function ( firstDown ) {
 							&& Math.abs(secondUp.pageX - secondDown.pageX) < distanceThreshold
 							&& Math.abs(secondUp.pageX - secondDown.pageX) < distanceThreshold) {
 							$document.trigger('doubletap');
-							console.log('doubletap!');
 						};
-
 					});
 				};
 			});
