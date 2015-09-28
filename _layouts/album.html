@@ -1,0 +1,43 @@
+---
+layout: post
+tag_sidebar: false
+---
+<table class="album">
+	<tbody>
+		<tr>
+			<td>Artist</td>
+			<td>{{ page.artist }}</td>
+		</tr>
+		<tr>
+			<td>Title</td>
+			<td><em>{{ page.album }}</em></td>
+		</tr>
+		<tr>
+			<td>Length</td>
+			<td>{{ page.duration }}</td>
+		</tr>
+		<tr>
+			<td>Release Date</td>
+			<td>
+			{% assign d = page.release_date | date: "%-d"  %}
+			{% case d %}
+				{% when '1' or '21' or '31' %}{{ d }}st
+				{% when '2' or '22' %}{{ d }}nd
+				{% when '3' or '23' %}{{ d }}rd
+				{% else %}{{ d }}th
+			{% endcase %}
+			{{ page.release_date | date: "%B %Y" }}</td>
+		</tr>
+		<tr>
+			<td>Track Listing</td>
+			<td>
+				<ol>
+					{% for track in page.track_listing %}
+					<li><span>{{ track }}</span></li>
+					{% endfor %}
+				</ol>
+			</td>
+		</tr>
+	</tbody>
+</table>
+{{content}}
