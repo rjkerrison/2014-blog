@@ -6,8 +6,8 @@ category:
 tags: music
 year: 2015
 month: 09
-day: 28
-date: 2015-09-28
+day: 29
+date: 2015-09-29
 published: true
 summary: Lana Del Rey's cinematic fourth album.
 wideimg: lana
