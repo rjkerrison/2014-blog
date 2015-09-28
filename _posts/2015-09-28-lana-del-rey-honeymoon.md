@@ -53,11 +53,12 @@ There's no doubt about the _Kill Bill_ vibe of 'God Knows I Tried'.
 It'd slot nicely into _Django Unchained_, too.
 The 4-note broken chord that marches up and down an acoustic guitar throughout screams gritty western.
 It's a Simone-esque plea for forgiveness, akin to 'Don't Let Me Be Misunderstood',
-a cover of which later closes the album.
+a cover of which closes the album.
 
 That finale for _Honeymoon_ seems at first out of place, but fits perfectly.
 Don't let me be misunderstood, 'Don't Let Me Be Misunderstood' is one of my most favourite songs of all time.
 Its lyrical simplicity, its heartfelt appeal, that bloody haunting riff: it's all so beautiful.
+The Santa Esmerelda version which actually did feature on _Kill Bill_ was a fitting addition to the soundtrack.
 Seeing it at the bottom of the track listing for _Honeymoon_ was a pretty big deal for me.
 The only time I can remember being this excited about a cover version was with London Grammar's 'Nightcall';
 I made some pretty horrific contortions upon first hearing it.
@@ -68,7 +69,7 @@ My first listen to _Honeymoon_'s aforementioned closing cover was gladly in isol
 so I was permitted any variety of involuntary appreciation.
 Hairs stood on end for sure and I'd be surprised if I didn't close my eyes and relax into a euphoric stupor.
 The track marries Lana's silky vocals with Horace Ott's lyrics to create another original take on the much-covered classic.
-Harpsicords, xylophones and a string quartet: it's a high-concept arrangement that matches up to Lana and well rounds off the album.
+Harpsicords, xylophones and a string quartet: it's a high-concept arrangement that matches up to Lana's vocals and rounds off the album well.
 
 Elsewhere, there's more of a mainstream appeal present,
 none more so than in lead single 'Music To Watch Boys To'.
