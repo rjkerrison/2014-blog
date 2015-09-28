@@ -111,7 +111,7 @@ making a connection to _The Great Gatsby_ is hardly a leap at all,
 not least in the "gun metal" line.
 
 We follow that allusion with something decidedly more David Lynch.
-A minute and a half of spoken word 'Burnt Norton' sounds like a message sent to Agent Cooper in a fever dream.
+A minute and a half of spoken word, 'Burnt Norton' sounds like a message sent to Agent Cooper in a fever dream.
 Calling it the 'Fitter Happier' of _Honeymoon_ would be a discredit to just how batshit 'Burnt Norton' is.
 
 With 'Religion', we're back to the mainstream hits Lana can brew up so well.
