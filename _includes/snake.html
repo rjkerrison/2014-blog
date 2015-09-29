@@ -1,0 +1,225 @@
+<div id="snake">
+	<h2>Snake</h2>
+	<canvas id="canvas" height="500" width="500">
+	</canvas>
+
+	<div id="game-over">
+		<p>Game over.<br />Your score was {{score}}.</p>
+		<button>Go again?</button>
+	</div>
+
+	<p id="score">Score: {{score}}</p>
+</div>
+
+<script>
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+var snake;
+
+var grid = {
+	width: 20,
+	height: 20
+};
+
+var resetSnake = function() {
+	snake = {
+		squares:
+			[
+				{x: 3, y: 4},
+				{x: 2, y: 4},
+				{x: 1, y: 4},
+			],
+		color: '#ff0000',
+		direction: {
+			x: 0,
+			y: 1
+		},
+		nextDirection: {
+			x: 1,
+			y: 0
+		},
+	};
+};
+
+var food = {
+	color: '#0534e9'
+};
+
+var drawGrid = function () {
+	context.strokeStyle = "#d0d0d0";
+	for (var i = 0; i < 50; i++) {
+		context.beginPath();
+		context.moveTo(0, i*10);
+		context.lineTo(500, i*10);
+		context.stroke();
+		context.closePath();
+		context.beginPath();
+		context.moveTo(i*10, 0);
+		context.lineTo(i*10, 500);
+		context.stroke();
+		context.closePath();
+	}
+};
+
+var getWidth = function() {
+	return canvas.width / grid.width;
+};
+
+var getHeight = function() {
+	return canvas.height / grid.height;
+};
+
+var drawSnake = function () {
+	context.fillStyle = snake.color;
+	for (var i = 0; i < snake.squares.length; i++)
+	{
+		context.fillRect(
+			snake.squares[i].x * getWidth() + 1,
+			snake.squares[i].y * getHeight() + 1,
+			getWidth() - 2,
+			getHeight() - 2);
+	}
+};
+
+var drawFood = function () {
+	context.fillStyle = food.color;
+	context.fillRect(
+		food.x * getWidth() + 1,
+		food.y * getHeight() + 1,
+		getWidth() - 2,
+		getHeight() - 2);
+};
+
+function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var moveFood = function () {
+	do {
+		food.x = getRandomInt(0, grid.width - 1);
+		food.y = getRandomInt(0, grid.height - 1);
+	} while (snake.squares.some(function (square) {
+		return food.x == square.x
+			&& food.y == square.y;
+	}))
+};
+
+var isCapture = function (newHead) {
+	return newHead.x == food.x
+		&& newHead.y == food.y;
+};
+
+var gameOver = document.getElementById('game-over');
+var scoreDisplay = document.getElementById('score');
+var score = 0;
+
+var updateScore = function (element) {
+	if (!element.templateString) {
+		element.templateString = element.innerText;
+	}
+	element.innerText = element.templateString.replace(
+		'{{score}}',
+		score);
+};
+
+var moveSnake = function () {
+	changeDirection();
+	var newHead = {
+		x: snake.squares[0].x + snake.direction.x,
+		y: snake.squares[0].y + snake.direction.y,
+	};
+	if (snake.squares.every(function (value) {
+		return value.x != newHead.x
+			|| value.y != newHead.y;
+	})
+	&& newHead.x >= 0
+	&& newHead.x <= grid.width - 1
+	&& newHead.y >= 0
+	&& newHead.y <= grid.height - 1) {
+		snake.squares.splice(0, 0, newHead);
+		if (isCapture(newHead)) {
+			moveFood();
+			score++;
+			updateScore(scoreDisplay);
+		}
+		else {
+			snake.squares.pop();
+		}
+		return true;
+	}
+	else {
+		updateScore(gameOver.children[0]);
+		gameOver.style.display = 'Block';
+		return false;
+	}
+};
+
+document.onkeydown = function (event) {
+	switch (event.keyCode) {
+		case 37:
+			snake.nextDirection = {x: -1, y: 0};
+			return;
+		case 38:
+			snake.nextDirection = {x: 0, y: -1};
+			return;
+		case 39:
+			snake.nextDirection = {x: 1, y: 0};
+			return;
+		case 40:
+			snake.nextDirection = {x: 0, y: 1};
+			return;
+	}
+};
+
+var changeDirection = function () {
+	if ((snake.direction.x != 0
+		&& snake.nextDirection.x == 0)
+		|| (snake.direction.y != 0
+		&& snake.nextDirection.y == 0)) {
+		snake.direction.x = snake.nextDirection.x;
+		snake.direction.y = snake.nextDirection.y;
+	}
+};
+
+var interval;
+var reset = function () {
+	gameOver.style.display = 'None';
+	resetSnake();
+	moveFood();
+	score = 0;
+	updateScore(scoreDisplay);
+	interval = setInterval(function () {
+		if (!moveSnake()) {
+			clearInterval(interval);
+		}
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		drawSnake();
+		drawFood();
+	},
+	100);
+};
+
+gameOver.children[1].onclick = reset;
+reset();
+
+var snakeBot = function () {
+	var xDiff = food.x - snake.squares[0].x;
+	var yDiff = food.y - snake.squares[0].y;
+
+	snake.nextDirection = {
+		x: Math.abs(xDiff) > Math.abs(yDiff)
+			? xDiff > 0
+				? 1
+				: -1
+			: 0,
+		y: Math.abs(yDiff) > Math.abs(xDiff)
+			? yDiff > 0
+				? 1
+				: -1
+			: 0
+	};
+};
+
+setTimeout(snakeBot,
+10);
+</script>

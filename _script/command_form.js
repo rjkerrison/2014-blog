@@ -23,6 +23,10 @@ var showRaptor = function () {
 		3000);
 };
 
+var showSnake = function () {
+	$('#snake').toggle();
+};
+
 var redirectTo = function (url) {
 	return function () {
 		window.location.href = '{{ site.url }}' + url;
@@ -33,6 +37,7 @@ var redirectTo = function (url) {
 
 var commandDictionary = {
 	'raptor': showRaptor,
+	'snake': showSnake,
 	'home': redirectTo('/'),
 	'blog': redirectTo('/blog'),
 	'about': redirectTo('/about'),
