@@ -60,7 +60,7 @@ CHVRCHES's obsession with the anatomical is once again present, with some bizarr
 <blockquote>We bide our time, stay afloat, keeping the sun off of our bones.</blockquote>
 
 'Make Them Gold' might not be quite so biologically bewitched when
-Mayberry promises to _``take the best part of ourselves and make them gold''_;
+Mayberry promises to _"take the best part of ourselves and make them gold"_;
 it's unclear whether she means our great sense of humour and kindness to others
 or our ears and patellae.
 The song is upbeat – or is it?
