@@ -11,6 +11,8 @@ date: 2015-09-29
 published: true
 summary: "The second coming of CHVRCHES."
 wideimg: chvrches
+wideimg_width: 1500
+wideimh_height: 390
 # Album
 release_date: 2015-09-25
 artist: CHVRCHES
