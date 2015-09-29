@@ -7,30 +7,21 @@ sidebar: false
 ---
 <div class="row text-center">
 	<div class="col-md-4">
-		{% include image.html local="chess-200.jpg"	title="It's hard to tell from this picture, but I think Xavier has moved once and captured a pawn. Guy's a pro."	lightbox="Index" %}
+		{% include image.html local="chess-200.jpg" title="Chess is a thing that exists." lightbox="Index" %}
 		<h2>Who's this Robin guy?</h2>
-		<p>I'm a dude. I live in London and I like mashed potato.
+		<p>I live in London, originally from Newcastle or thereabouts.
 		There's an <a href="{{site.url}}/about">about page</a> if you're into that sort of thing.</p>
 		<p><small>If you're not into that sort of thing, it still exists and there's not a lot you can do about it.</small></p>
 	</div>
 	<div class="col-md-4">
-		{% include image.html local="bakerstreetwide-200.jpg"	title="It's hard to tell from this picture, but I think Xavier has moved once and captured a pawn. Guy's a pro."	lightbox="Index" %}
+		{% include image.html local="bakerstreetwide-200.jpg" title="Baker Street station." lightbox="Index" %}
 		<h2>Programming</h2>
 		It's what I do for a career and sometimes for fun.
 	</div>
 	<div class="col-md-4">
-		{% include image.html local="liz-tower-go-200.jpg"	title="It's hard to tell from this picture, but I think Xavier has moved once and captured a pawn. Guy's a pro."	lightbox="Index" %}
+		{% include image.html local="liz-tower-go-200.jpg" title="Elizabeth Tower and a DC vigilante." lightbox="Index" %}
 		<h2>Photography</h2>
 		I do a lot of photography.
 		To ask me about it, contact me via <a href="//twitter.com/rjkerrison">Twitter</a>.
-	</div>
-	<div class="col-md-12">
-		<p>First three posts when sorted alphabetically:</p>
-		<ul>
-		{% assign posts = site.posts | sort: 'title' %}
-		    {% for post in posts limit:3 %}
-		        <li>{{ post.title }}</li>
-		    {% endfor %}
-		</ul>
 	</div>
 </div>
