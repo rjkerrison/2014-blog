@@ -31,24 +31,27 @@ track_listing:
 ---
 CHVRCHES second full-length splash _Every Open Eye_ had a lot to live up to in its predecessor,
 _The Bones Of What You Believe_.
-That first album was a fresh addition to electronic pop, though guilty of a bipartite structure,
-its singles noticeably contrasting with the album as a whole.
-Where 'We Sink', 'Lies' and 'The Mother We Share' relied heavily on the juxtaposition of Lauren Mayberry's clean vocals
+That first album was a fresh addition to electronic pop, though perhaps guilty of a bipartite structure.
+Where singles 'We Sink', 'Lies' and 'The Mother We Share' relied heavily on the juxtaposition of Lauren Mayberry's clean vocals
 with lyrics charged by the reluctant self-actualisation indicative of and unique to Scotland,
-others on the album were happier to draw attention to Ian and Martin's vocals and talent for electronica.
+others on the album were happier to draw attention to Iain Cook and Martin Doherty's talent for synthesised instrumentals.
 
-_Every Open Eye_ marries the two halves of the first album in what seems to be the coherent CHVRCHES sound,
-only the bones of which were present on _Bones_.
-Its both bolder in general and tamer in its extremes.
+The follow-up marries _Bones_'s two halves in what seems to be a coherent CHVRCHES sound,
+only the bones of which were previously present;
+_Every Open Eye_ is both bolder in general and tamer in its extremes.
 
-'Never Ending Circles' is the most popular of the promotional singles from _Every Open Eye_
-as well as its capable opener with a gorgeous four-chord intro, short and sweet verses
+'Never Ending Circles' is a capable opener: a gorgeous four-chord intro, short and sweet verses
 and the hookiest of hooky choruses from the Glaswegian trio to date.
 It establishes a murkier, fuller sound for the band as a backdrop for yet more strange synecdoche
 to add to CHVRCHES's dictionary of idioms.
 
 'Leave A Trace' is an absolute delight, never relenting in delivering crisp and catchy lyrics
-against a synthetic tutti in what is such a perfectly produced 
+against a synthetic tutti in a perfectly produced number.
+It also introduces us to apparent funereal undertones,
+later revisited in 'Bury It' and 'Playing Dead' in particular.
+
+<blockquote>Take care to bury all that you can,
+take care to leave a trace of a man.</blockquote>
 
 We've then got enjambement extraordinaire 'Keep You On My Side' which has all the tone
 of a bittersweet summer anthem akin to 'Heaven' or 'Boys of Summer'.
