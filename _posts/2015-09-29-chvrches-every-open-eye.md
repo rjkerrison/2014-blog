@@ -77,7 +77,7 @@ It's also the provider of the anatomical album name this time around, aligning i
 'High Enough To Carry You Over' finds a lead voice within Martin Doherty
 which _Bones_ never quite found, though not through lack of trying.
 Where 'You Caught the Light' and 'Under The Tide' jarred somewhat against the rest of _Bones_,
-'High Enough To Carry You Over' is one of _Every_Open_Eye_'s strongest and adds to its overall sound.
+'High Enough To Carry You Over' is one of _Every Open Eye_'s strongest and adds to its overall sound.
 It's beautiful, sounding so much like it dropped out of the 1980s.
 It could be the theme to a beta-male-driven feature-length romp that can't decide whether it's action or romcom.
 Hell, maybe it's CHVRCHES's contribution to a rescoring of _Drive_ that Radio 1's 'Get Away' just wasn't.
