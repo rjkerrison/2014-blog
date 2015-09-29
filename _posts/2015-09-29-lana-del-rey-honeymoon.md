@@ -11,6 +11,8 @@ date: 2015-09-29
 published: true
 summary: Lana Del Rey's cinematic fourth album.
 wideimg: lana-roses
+wideimg_width: 1300
+wideimg_height: 498
 # Album
 release_date: 2015-09-18
 artist: Lana Del Rey
