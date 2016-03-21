@@ -1,0 +1,54 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+$(document).on('ready', function () {
+	
+	var textarea = $('textarea');
+	var timeout = 2000;
+	var timeRemain = timeout;
+	var twofivefive;
+
+	setInterval(function () {
+		timeRemain -= 5;
+		if (timeRemain <= 0) {
+			textarea.val('');
+			textarea.css({
+				'color': 'rgb(0, 0, 0)'
+			});
+			return;
+		}
+		twofivefive = 255 * (1 - timeRemain / timeout);
+		textarea.css({
+			'color': 'rgb(' + twofivefive + ',' + twofivefive + ',' + twofivefive + ')'
+		});
+	},
+	5);
+
+	$('textarea').on('keypress', function () {
+		timeRemain = timeout;
+		textarea.css({
+			'color': 'rgb(0, 0, 0)'
+		});
+	});
+});
+</script>
+<style>
+textarea {
+	height: 500px;
+	width: 500px;
+	resize: none;
+}
+</style>
+</head>
+<body>
+
+<h1>Flow Writing</h1>
+
+<p>Type in the box below. Pause for over two seconds and you lose the lot.</p>
+
+<textarea>
+</textarea>
+
+</body>
+</html>
