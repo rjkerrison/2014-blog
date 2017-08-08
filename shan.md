@@ -1,5 +1,11 @@
+---
+permalink: /about/
+layout: default
+title: "World's Best SysAdmin"
+---
+
 # Shan!
 
 ![Shan's the man.][1]
 
-[1]: http://imgur.com/T4WTRfI
+[1]: https://i.imgur.com/T4WTRfI.jpg
