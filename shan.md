@@ -1,5 +1,5 @@
 ---
-permalink: /about/
+permalink: /shan/
 layout: default
 title: "World's Best SysAdmin"
 ---
