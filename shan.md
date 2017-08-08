@@ -1,6 +1,6 @@
 ---
 permalink: /shan/
-layout: default
+layout: basic
 title: "World's Best SysAdmin"
 ---
 
