@@ -21,7 +21,7 @@ var grid = {
 	height: 20
 };
 
-var resetSnake = function() {
+function resetSnake() {
 	snake = {
 		squares:
 			[
@@ -29,7 +29,7 @@ var resetSnake = function() {
 				{x: 2, y: 4},
 				{x: 1, y: 4},
 			],
-		color: '#ff0000',
+		color: '#ffaa00',
 		direction: {
 			x: 0,
 			y: 1
@@ -45,7 +45,7 @@ var food = {
 	color: '#0534e9'
 };
 
-var drawGrid = function () {
+function drawGrid() {
 	context.strokeStyle = "#d0d0d0";
 	for (var i = 0; i < 50; i++) {
 		context.beginPath();
@@ -61,27 +61,47 @@ var drawGrid = function () {
 	}
 };
 
-var getWidth = function() {
+function getWidth() {
 	return canvas.width / grid.width;
 };
 
-var getHeight = function() {
+function getHeight() {
 	return canvas.height / grid.height;
 };
 
-var drawSnake = function () {
-	context.fillStyle = snake.color;
+var label = true;
+function drawLabel(square) {
+	if (!label) {
+		return;
+	}
+
+	context.fillStyle = food.color;
+	context.fillText(
+		'x:' + square.x,
+		square.x * getWidth() + 5,
+		square.y * getHeight() + 10);
+
+	context.fillText(
+		'y:' + square.y,
+		square.x * getWidth()+ 5,
+		square.y * getHeight() + 20);
+}
+
+function drawSnake() {
 	for (var i = 0; i < snake.squares.length; i++)
 	{
+		context.fillStyle = snake.color;
 		context.fillRect(
 			snake.squares[i].x * getWidth() + 1,
 			snake.squares[i].y * getHeight() + 1,
 			getWidth() - 2,
 			getHeight() - 2);
+
+		drawLabel(snake.squares[i]);
 	}
 };
 
-var drawFood = function () {
+function drawFood() {
 	context.fillStyle = food.color;
 	context.fillRect(
 		food.x * getWidth() + 1,
@@ -94,7 +114,7 @@ function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var moveFood = function () {
+function moveFood() {
 	do {
 		food.x = getRandomInt(0, grid.width - 1);
 		food.y = getRandomInt(0, grid.height - 1);
@@ -104,7 +124,7 @@ var moveFood = function () {
 	}))
 };
 
-var isCapture = function (newHead) {
+function isCapture(newHead) {
 	return newHead.x == food.x
 		&& newHead.y == food.y;
 };
@@ -113,7 +133,8 @@ var gameOver = document.getElementById('game-over');
 var scoreDisplay = document.getElementById('score');
 var score = 0;
 
-var updateScore = function (element) {
+function updateScore(element) {
+	console.log('score: ' + score);
 	if (!element.templateString) {
 		element.templateString = element.innerText;
 	}
@@ -122,7 +143,7 @@ var updateScore = function (element) {
 		score);
 };
 
-var moveSnake = function () {
+function tryMoveSnake() {
 	changeDirection();
 	var newHead = {
 		x: snake.squares[0].x + snake.direction.x,
@@ -154,6 +175,8 @@ var moveSnake = function () {
 	}
 };
 
+var paused = true;
+
 document.onkeydown = function (event) {
 	switch (event.keyCode) {
 		case 37:
@@ -168,10 +191,18 @@ document.onkeydown = function (event) {
 		case 40:
 			snake.nextDirection = {x: 0, y: 1};
 			return;
+		case 32:
+			if (paused) {
+				play();
+			}
+			else {
+				pause();
+			}
+			return;
 	}
 };
 
-var changeDirection = function () {
+function changeDirection() {
 	if ((snake.direction.x != 0
 		&& snake.nextDirection.x == 0)
 		|| (snake.direction.y != 0
@@ -181,45 +212,167 @@ var changeDirection = function () {
 	}
 };
 
-var interval;
-var reset = function () {
+function makeMove() {
+	if (!tryMoveSnake()) {
+		pause();
+	}
+	context.clearRect(0, 0, canvas.width, canvas.height);
+	drawSnake();
+	drawFood();
+}
+
+var interval, botInterval;
+
+function pause() {
+	paused = true;
+	clearInterval(interval);
+	clearInterval(botInterval);
+}
+
+function play() {
+	paused = false;
+	interval = setInterval(makeMove, 50);
+	botInterval = setInterval(snakeBot, 25);
+}
+
+function reset() {
+	pause();
 	gameOver.style.display = 'None';
 	resetSnake();
 	moveFood();
 	score = 0;
 	updateScore(scoreDisplay);
-	interval = setInterval(function () {
-		if (!moveSnake()) {
-			clearInterval(interval);
-		}
-		context.clearRect(0, 0, canvas.width, canvas.height);
-		drawSnake();
-		drawFood();
-	},
-	100);
 };
 
 gameOver.children[1].onclick = reset;
 reset();
+play();
 
-var snakeBot = function () {
-	var xDiff = food.x - snake.squares[0].x;
-	var yDiff = food.y - snake.squares[0].y;
+var directions = {
+	down: {name:'down', x: 0, y: 1},
+	up: {name:'up', x: 0, y: -1},
+	left: {name:'left', x: -1, y: 0},
+	right: {name:'right', x: 1, y: 0}
+}
 
-	snake.nextDirection = {
-		x: Math.abs(xDiff) > Math.abs(yDiff)
-			? xDiff > 0
-				? 1
-				: -1
-			: 0,
-		y: Math.abs(yDiff) > Math.abs(xDiff)
-			? yDiff > 0
-				? 1
-				: -1
-			: 0
-	};
+function squareIsInDirection(head, square, direction) {
+	return ((head.x == s.x && (s.y - head.y) * d.y) > 0)
+		|| ((head.y == s.y && (s.x - head.x) * d.x) > 0);
+}
+
+function trapIsPossible(head, tails, direction) {
+	if (!tails.some(s => squareIsInDirection(head, s, direction))) {
+		return false;
+	}
+
+	if (direction.y != 0) {
+		for (var tail in tails.filter(s => squareIsInDirection(head, s, direction))) {
+			var tailsLeft =
+				tails.filter(
+					t =>
+						t.x > tail.x
+						&& t.y != tail.y
+						&& t.x < head.x)
+					.map(t => t.y);
+
+			var tailsRight =
+				tails.filter(t =>
+					t.x < tail.x
+					&& t.y != tail.y
+					&& t.x > head.x)
+					.map(t => t.y);
+
+			if (tailsLeft.every(l => tailsRight.some(r => r == l))
+				&& tailsRight.every(r => tailsLeft.some(l => l == r))) {
+				return true;
+			}
+		}
+	}
+
+	if (direction.x != 0) {
+		for (var tail in tails.filter(s => squareIsInDirection(head, s, direction))) {
+			var tailsUp =
+				tails.filter(
+					t =>
+						t.y > tail.y
+						&& t.x != tail.x
+						&& t.y < head.y)
+					.map(t => t.x);
+
+			var tailsDown =
+				tails.filter(t =>
+					t.y < tail.y
+					&& t.x != tail.x
+					&& t.y > head.y)
+					.map(t => t.x);
+
+			if (tailsUp.every(l => tailsDown.some(r => r == l))
+				&& tailsDown.every(r => tailsUp.some(l => l == r))) {
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
+function getBotDirection() {
+	var head = snake.squares[0];
+	var tails = snake.squares.slice(1);
+
+	var xDiff = food.x - head.x;
+	var yDiff = food.y - head.y;
+
+	var possibleDirections = [];
+
+	// Filter by boundary
+	if (head.x != 0
+		&& !tails.some(s => s.x == head.x - 1 && s.y == head.y)) {
+		possibleDirections.push(directions.left)
+	}
+
+	if (head.x != grid.width - 1
+		&& !tails.some(s => s.x == head.x + 1 && s.y == head.y)) {
+		possibleDirections.push(directions.right)
+	}
+
+	if (head.y != 0
+		&& !tails.some(s => s.y == head.y - 1 && s.x == head.x)) {
+		possibleDirections.push(directions.up)
+	}
+
+	if (head.y != grid.height - 1
+		&& !tails.some(s => s.y == head.y + 1 && s.x == head.x)) {
+		possibleDirections.push(directions.down)
+	}
+
+	// Avoids self-entrapment where detectable
+	var desirableDirections = possibleDirections.filter(
+		d => !trapIsPossible(head, tails, direction, tails));
+	if (desirableDirections.length > 0) {
+		possibleDirections = desirableDirections;
+	}
+
+	for (var direction of possibleDirections) {
+		if (yDiff * direction.y > 0) {
+			return direction;
+		}
+	}
+
+	for (var direction of possibleDirections) {
+		if (xDiff * direction.x > 0) {
+			return direction;
+		}
+	}
+
+	if (possibleDirections.length == 0) {
+		throw "no directions possible for some reason";
+	}
+
+	return possibleDirections[0];
+}
+
+function snakeBot() {
+	snake.nextDirection = getBotDirection();
 };
-
-setTimeout(snakeBot,
-10);
 </script>
