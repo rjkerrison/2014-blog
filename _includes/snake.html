@@ -1,3 +1,9 @@
+<style>
+	canvas {
+		border: 1px solid blue;
+	}
+</style>
+
 <div id="snake">
 	<h2>Snake</h2>
 	<canvas id="canvas" height="500" width="500">
@@ -9,6 +15,7 @@
 	</div>
 
 	<p id="score">Score: {{score}}</p>
+	<p id="allscore">Previous Scores: {{allscore}}</p>
 </div>
 
 <script>
@@ -131,10 +138,20 @@ function isCapture(newHead) {
 
 var gameOver = document.getElementById('game-over');
 var scoreDisplay = document.getElementById('score');
+var allScoreDisplay = document.getElementById('allscore');
 var score = 0;
+var allScores = [];
+
+function updateAllScore(element) {
+	if (!element.templateString) {
+		element.templateString = element.innerText;
+	}
+	element.innerText = element.templateString.replace(
+		'{{allscore}}',
+		allScores.join(', '));
+}
 
 function updateScore(element) {
-	console.log('score: ' + score);
 	if (!element.templateString) {
 		element.templateString = element.innerText;
 	}
@@ -215,6 +232,8 @@ function changeDirection() {
 function makeMove() {
 	if (!tryMoveSnake()) {
 		pause();
+		reset();
+		play();
 	}
 	context.clearRect(0, 0, canvas.width, canvas.height);
 	drawSnake();
@@ -231,8 +250,8 @@ function pause() {
 
 function play() {
 	paused = false;
-	interval = setInterval(makeMove, 50);
-	botInterval = setInterval(snakeBot, 25);
+	interval = setInterval(makeMove, 10);
+	botInterval = setInterval(snakeBot, 5);
 }
 
 function reset() {
@@ -240,6 +259,8 @@ function reset() {
 	gameOver.style.display = 'None';
 	resetSnake();
 	moveFood();
+	allScores.push(score);
+	updateAllScore(allScoreDisplay);
 	score = 0;
 	updateScore(scoreDisplay);
 };
@@ -256,8 +277,27 @@ var directions = {
 }
 
 function squareIsInDirection(head, square, direction) {
-	return ((head.x == s.x && (s.y - head.y) * d.y) > 0)
-		|| ((head.y == s.y && (s.x - head.x) * d.x) > 0);
+	return ((head.x == square.x && (square.y - head.y) * direction.y) > 0)
+		|| ((head.y == square.y && (square.x - head.x) * direction.x) > 0);
+}
+
+function directionIsEdge(head, direction) {
+	return head.x + direction.x == 0
+		|| head.x + direction.x == grid.width - 1
+		|| head.y + direction.y == 0
+		|| head.y + direction.y == grid.height - 1
+}
+
+function directionIsCorner(head, direction) {
+	return (head.x + direction.x == 0
+		|| head.x + direction.x == grid.width - 1)
+		&& (head.y + direction.y == 0
+		|| head.y + direction.y == grid.height - 1)
+}
+
+function directionIsFood(head, direction, food) {
+	return head.x + direction.x == food.x
+		|| head.y + direction.y == food.y
 }
 
 function trapIsPossible(head, tails, direction) {
@@ -266,7 +306,7 @@ function trapIsPossible(head, tails, direction) {
 	}
 
 	if (direction.y != 0) {
-		for (var tail in tails.filter(s => squareIsInDirection(head, s, direction))) {
+		for (var tail of tails.filter(s => squareIsInDirection(head, s, direction))) {
 			var tailsLeft =
 				tails.filter(
 					t =>
@@ -290,7 +330,7 @@ function trapIsPossible(head, tails, direction) {
 	}
 
 	if (direction.x != 0) {
-		for (var tail in tails.filter(s => squareIsInDirection(head, s, direction))) {
+		for (var tail of tails.filter(s => squareIsInDirection(head, s, direction))) {
 			var tailsUp =
 				tails.filter(
 					t =>
@@ -346,11 +386,18 @@ function getBotDirection() {
 		possibleDirections.push(directions.down)
 	}
 
-	// Avoids self-entrapment where detectable
-	var desirableDirections = possibleDirections.filter(
-		d => !trapIsPossible(head, tails, direction, tails));
-	if (desirableDirections.length > 0) {
-		possibleDirections = desirableDirections;
+	// Filter for desirability
+	filters = [
+		direction => !trapIsPossible(head, tails, direction, tails),
+		direction => !directionIsEdge(head, direction) || directionIsFood(head, direction, food),
+		direction => !directionIsCorner(head, direction) || directionIsFood(head, direction, food),
+	];
+
+	for (var filter of filters) {
+		desirableDirections = possibleDirections.filter(filter);
+		if (desirableDirections.length > 0) {
+			possibleDirections = desirableDirections;
+		}
 	}
 
 	for (var direction of possibleDirections) {
@@ -366,7 +413,7 @@ function getBotDirection() {
 	}
 
 	if (possibleDirections.length == 0) {
-		throw "no directions possible for some reason";
+		return {x: 0, y: 0};
 	}
 
 	return possibleDirections[0];
