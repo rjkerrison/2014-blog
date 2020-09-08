@@ -2,9 +2,12 @@
 permalink: "/js/command_form.js"
 ---
 // Keycodes
-// 82 - "r"
-// 32 - " "
-// 27 - Esc
+const keys = {
+	r: 82,
+	space: 32,
+	c: 67,
+	esc: 27
+};
 
 // Component Elements
 
@@ -67,10 +70,10 @@ $commandForm.submit(handleCommand);
 // Initialisation
 
 $(document).keydown(function (e) {
-	if (e.ctrlKey && e.altKey && e.keyCode === 82) {
+	if (e.ctrlKey && e.altKey && e.keyCode === keys.r) {
 		showRaptor();
 	}
-	if (e.ctrlKey && e.altKey && e.keyCode === 32) {
+	if (e.ctrlKey && e.altKey && (e.keyCode === keys.space || e.keyCode === keys.c)) {
 		$commandForm.show();
 		$commandFormInput.focus();
 		$commandFormInput.select();

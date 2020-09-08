@@ -14,7 +14,7 @@ I first started playing around with websites with my friend Bobby nearly nine ye
 
 ## The Command Form
 
-Pressing `Ctrl+Alt+Space` will bring up the command form.
+Pressing `Ctrl+Alt+Space` or `Ctrl+Alt+C` will bring up the command form.
 
 The command form will respond to the following commands with the indicated behaviour:
 
@@ -22,3 +22,4 @@ The command form will respond to the following commands with the indicated behav
 - **blog** – redirect to the main blog page
 - **about** – redirect to this page
 - **raptor** – show a velociraptor
+- **snake** – show a playable game of snake
