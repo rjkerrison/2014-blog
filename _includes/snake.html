@@ -123,13 +123,12 @@
   let score = 0;
 
   const updateScore = function (element) {
-    console.log(element);
     if (!element.templateString) {
       element.templateString = element.innerText;
     }
     const scoreTemplate = element.templateString;
     const scoreComplete = scoreTemplate.replace("${score}", score);
-    console.log({ scoreTemplate, scoreComplete });
+
     element.innerText = scoreComplete;
   };
 
