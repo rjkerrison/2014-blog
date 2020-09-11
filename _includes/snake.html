@@ -2,16 +2,20 @@
 ---
 
 <div id="snake">
-  <h2>Snake</h2>
+  <h2>Snake!</h2>
   <canvas id="canvas" height="500" width="500"> </canvas>
 
   <div id="game-over">
-    <p>Game over.</p>
-    <p id="game-over-score">Your score was {{score}}.</p>
+    <p>Game over!</p>
+    <p id="game-over-score">Your score was ${score}.</p>
     <button id="go-again">Go again?</button>
   </div>
 
-  <p id="score">Score: {{score}}</p>
+  <p id="score">Score: ${score}</p>
+  <p>
+    <span id="robot-question">Just want to watch?</span>
+    <button id="robot">Let the robot play.</button>
+  </p>
 </div>
 
 <script>
@@ -119,10 +123,14 @@
   let score = 0;
 
   const updateScore = function (element) {
+    console.log(element);
     if (!element.templateString) {
       element.templateString = element.innerText;
     }
-    element.innerText = element.templateString.replace("{{score}}", score);
+    const scoreTemplate = element.templateString;
+    const scoreComplete = scoreTemplate.replace("${score}", score);
+    console.log({ scoreTemplate, scoreComplete });
+    element.innerText = scoreComplete;
   };
 
   const moveSnake = function () {
@@ -202,9 +210,6 @@
     }, 100);
   };
 
-  ["click", "touch", "keydown"].map((eventType) =>
-    goAgainButton.addEventListener(eventType, reset)
-  );
   reset();
 
   const snakeBot = function () {
@@ -238,8 +243,29 @@
         }
       }
     }
-
-    setTimeout(snakeBot, 10);
   };
-  snakeBot();
+
+  const robotButton = document.getElementById("robot");
+  const robotQuestion = document.getElementById("robot-question");
+
+  let robotOn = false;
+  let robotInterval = 0;
+
+  const toggleSnakeBot = () => {
+    robotOn = !robotOn;
+    if (robotOn) {
+      robotButton.innerText = "Take control.";
+      robotQuestion.innerText = "Want to play?";
+      robotInterval = setInterval(snakeBot, 50);
+    } else {
+      robotButton.innerText = "Let the robot play.";
+      robotQuestion.innerText = "Just want to watch?";
+      clearInterval(robotInterval);
+    }
+  };
+
+  ["click", "touch", "keydown"].map((eventType) => {
+    goAgainButton.addEventListener(eventType, reset);
+    robotButton.addEventListener(eventType, toggleSnakeBot);
+  });
 </script>

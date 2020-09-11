@@ -1,5 +1,5 @@
-markdown: rdiscount
+markdown: kramdown
 highlighter: pygments
 permalink: /blog/:year/:month/:day/:title/
-include: ['/_script']
-url: http://rjkerrison.co.uk
+include: ["/_script"]
+url: https://rjkerrison.co.uk
