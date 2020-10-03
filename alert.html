@@ -1,0 +1,35 @@
+---
+layout: layout
+title: "Alert test"
+permalink: /alert/
+---
+
+<div class="text-center">
+  <button id="alert">Alert button</button>
+  <button id="confirm">Confirm button</button>
+  <p id="message"></p>
+</div>
+<script type="text/javascript">
+  const message = document.getElementById("message");
+  const alertButton = document.getElementById("alert");
+  const confirmButton = document.getElementById("confirm");
+  const alert = () => {
+    window.alert("This is an alert.");
+    message.innerText = "user closed alert";
+  };
+  const confirm = () => {
+    const confirmed = window.confirm(
+      "Please confirm you understand that this is a confirm dialog."
+    );
+    if (confirmed) {
+      message.innerText = "user confirmed";
+    } else {
+      message.innerText = "user cancelled";
+    }
+  };
+
+  alertButton.addEventListener("click", alert);
+  alertButton.addEventListener("keypress", alert);
+  confirmButton.addEventListener("click", confirm);
+  confirmButton.addEventListener("keypress", confirm);
+</script>
